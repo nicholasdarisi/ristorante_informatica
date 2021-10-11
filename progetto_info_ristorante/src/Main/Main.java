@@ -18,6 +18,7 @@ public class Main {
 		Ordine o = new Ordine();
 		Grafica g = new Grafica();
 		Controller c = new Controller(a, cam, cuc, cas, o, g);
+		c.inizio();
 	}
 
 }
