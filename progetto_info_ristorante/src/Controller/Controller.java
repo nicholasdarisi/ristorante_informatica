@@ -26,6 +26,10 @@ public class Controller implements ActionListener{
 		this.o = o;
 		this.g = g;
 	}
+	
+	public void inizio() {
+		g.mostra();
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
