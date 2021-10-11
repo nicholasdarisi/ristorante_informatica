@@ -1,5 +1,5 @@
 package Model;
 
-public class Ristorante {
+public class Cassa {
 
 }
