@@ -1,21 +1,26 @@
 package View;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Grafica {
 
-	private JFrame frame;
+	private JFrame frmRistorante;
 	
 	public Grafica() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 1200, 500);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmRistorante = new JFrame();
+		frmRistorante.setTitle("Ristorante");
+		frmRistorante.setResizable(false);
+		frmRistorante.setBounds(100, 100, 1200, 500);
+		frmRistorante.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmRistorante.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(0, 0, 1200, 500);
+		frmRistorante.getContentPane().add(lblNewLabel);
 	}
 
 	public void mostra() {
-		frame.setVisible(true);
+		frmRistorante.setVisible(true);
 	}
-	
-	
-
 }
