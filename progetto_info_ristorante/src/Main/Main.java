@@ -11,13 +11,13 @@ import Model.Cassa;
 public class Main {
 	
 	public static void main(String[] args) {
-		Amministrazione a = new Amministrazione();
-		Cameriere cam = new Cameriere(null);
-		Cucina cuc = new Cucina(null);
-		Cassa cas = new Cassa();
-		Ordine o = new Ordine();
+		Amministrazione a;
+		Cameriere cam;
+		Cucina cuc;
+		Cassa cas;
+		Ordine o;
 		Grafica g = new Grafica();
-		Controller c = new Controller(a, cam, cuc, cas, o, g);
+		Controller c = new Controller(null, null, null, null, null, g);
 		c.inizio();
 	}
 
