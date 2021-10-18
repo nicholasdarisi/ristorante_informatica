@@ -34,6 +34,35 @@ public class Controller implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		//ordina
+		if (e.getSource() == g.getButton(0)) { 
+			
+			
+		}
+		
+		//reset
+		if (e.getSource() == g.getButton(1)) {
+			
+			
+		}
+		
+		//cucina
+		if (e.getSource() == g.getButton(2)) {
+	
+			
+		}
+		
+		//modifica
+		if (e.getSource() == g.getButton(3)) {
+			
+			
+		}
+
+		//paga
+		if (e.getSource() == g.getButton(4)) {
+			
+			
+		}
 		
 	}
 
