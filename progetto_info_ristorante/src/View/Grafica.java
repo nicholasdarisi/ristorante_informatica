@@ -36,6 +36,8 @@ public class Grafica {
 	private JTextField txtCaff;
 	private JTextField txtTiramis;
 	
+	
+	
 	public Grafica() {
 		frmRistorante = new JFrame();
 		frmRistorante.setTitle("Ristorante");
@@ -334,4 +336,22 @@ public class Grafica {
 	public void mostra() {
 		frmRistorante.setVisible(true);
 	}
+	
+	public JButton getButton(int type) {
+        switch (type) {
+            case 0:
+                //return btnNewButton;
+            case 1:
+                //return btnNewButton_1;
+            case 2:
+                //return btnNewButton_2;
+            case 3:
+                //return btnNewButton_3;
+            case 4:
+                //return btnNewButton_4;
+            case 5:
+                //return btnNewButton_5;
+        }
+        return null;
+    }
 }
