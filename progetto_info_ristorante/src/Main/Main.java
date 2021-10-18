@@ -36,25 +36,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Scrittura di oggetti
-		try {
-			Persona pout = new Persona ("Alessio", "Sartoretto");
-			FileOutputStream fos = new FileOutputStream("elenco.dat");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(pout);
-			oos.flush();
-			fos.close();
-		} catch (Exception e) {}
-		
-		//Lettura di oggetti
-		try {
-			FileInputStream fis = new FileInputStream("elenco.dat");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			Persona pin = (Persona) ois.readObject();
-			fis.close();
-			System.out.println(pin.toString());
-		} catch (Exception e) {}
-		
-	}
+
 
 }
 */

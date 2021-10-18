@@ -17,11 +17,11 @@ public class Cameriere {
     public void addPiatti(ArrayList<String> ordini){
         piatti = ordini;
     }
-    public String getPiatti(){
+    public String getPiatti(Ordine ordine){
         String a = null;
         if(piatti.size() > 0){
             for(String piatto : piatti){
-                Ordine.menu.get(piatto.intern());
+                Menu.menu.get(piatto.intern());
             }
         }
         return a;
