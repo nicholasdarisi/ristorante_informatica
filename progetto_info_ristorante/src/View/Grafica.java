@@ -9,6 +9,9 @@ import javax.swing.JSpinner;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
 
 public class Grafica {
 
@@ -35,6 +38,11 @@ public class Grafica {
 	private JTextField txtVinoRosso;
 	private JTextField txtCaff;
 	private JTextField txtTiramis;
+	private JButton btnResetta;
+	private JButton btnModifica;
+	private JButton btnCucina;
+	private JButton btnPaga;
+	private JTextField txtInformazioniBenvenutiAl;
 	
 	
 	
@@ -47,6 +55,7 @@ public class Grafica {
 		frmRistorante.getContentPane().setLayout(null);
 		
 		txtMen = new JTextField();
+		txtMen.setBackground(Color.WHITE);
 		txtMen.setForeground(Color.RED);
 		txtMen.setFont(new Font("Kristen ITC", Font.PLAIN, 40));
 		txtMen.setHorizontalAlignment(SwingConstants.CENTER);
@@ -61,26 +70,29 @@ public class Grafica {
 		frmRistorante.getContentPane().add(spinner);
 		
 		txtCucina = new JTextField();
+		txtCucina.setBackground(Color.WHITE);
 		txtCucina.setForeground(Color.RED);
 		txtCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtCucina.setText("Cucina");
 		txtCucina.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCucina.setEditable(false);
 		txtCucina.setColumns(10);
-		txtCucina.setBounds(716, 631, 116, 50);
+		txtCucina.setBounds(782, 553, 116, 50);
 		frmRistorante.getContentPane().add(txtCucina);
 		
 		txtTavoli = new JTextField();
+		txtTavoli.setBackground(Color.WHITE);
 		txtTavoli.setForeground(Color.RED);
 		txtTavoli.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtTavoli.setText("Tavoli");
 		txtTavoli.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTavoli.setEditable(false);
 		txtTavoli.setColumns(10);
-		txtTavoli.setBounds(154, 683, 116, 50);
+		txtTavoli.setBounds(215, 553, 116, 50);
 		frmRistorante.getContentPane().add(txtTavoli);
 		
 		txtAntipasti = new JTextField();
+		txtAntipasti.setBackground(Color.WHITE);
 		txtAntipasti.setForeground(Color.BLUE);
 		txtAntipasti.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtAntipasti.setText("Antipasti");
@@ -91,6 +103,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtAntipasti);
 		
 		txtPrimi = new JTextField();
+		txtPrimi.setBackground(Color.WHITE);
 		txtPrimi.setForeground(Color.BLUE);
 		txtPrimi.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtPrimi.setText("Primi");
@@ -101,6 +114,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtPrimi);
 		
 		txtSecondi = new JTextField();
+		txtSecondi.setBackground(Color.WHITE);
 		txtSecondi.setForeground(Color.BLUE);
 		txtSecondi.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtSecondi.setText("Secondi");
@@ -111,6 +125,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtSecondi);
 		
 		txtContorni = new JTextField();
+		txtContorni.setBackground(Color.WHITE);
 		txtContorni.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtContorni.setForeground(Color.BLUE);
 		txtContorni.setText("Contorni");
@@ -121,6 +136,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtContorni);
 		
 		txtBevande = new JTextField();
+		txtBevande.setBackground(Color.WHITE);
 		txtBevande.setForeground(Color.BLUE);
 		txtBevande.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtBevande.setText("Bevande");
@@ -131,6 +147,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtBevande);
 		
 		txtDolciECaff = new JTextField();
+		txtDolciECaff.setBackground(Color.WHITE);
 		txtDolciECaff.setFont(new Font("Kristen ITC", Font.PLAIN, 30));
 		txtDolciECaff.setForeground(Color.BLUE);
 		txtDolciECaff.setText("Dolci e caff\u00E8");
@@ -141,6 +158,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtDolciECaff);
 		
 		txtBattilardaConSalumi = new JTextField();
+		txtBattilardaConSalumi.setBackground(Color.WHITE);
 		txtBattilardaConSalumi.setText("Battilarda con Salumi e piadine farcite");
 		txtBattilardaConSalumi.setHorizontalAlignment(SwingConstants.CENTER);
 		txtBattilardaConSalumi.setForeground(Color.BLACK);
@@ -151,6 +169,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtBattilardaConSalumi);
 		
 		txtTagliatelleAlRag = new JTextField();
+		txtTagliatelleAlRag.setBackground(Color.WHITE);
 		txtTagliatelleAlRag.setText("Tagliatelle al rag\u00F9");
 		txtTagliatelleAlRag.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTagliatelleAlRag.setForeground(Color.BLACK);
@@ -161,6 +180,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtTagliatelleAlRag);
 		
 		txtRavioliAiPorcini = new JTextField();
+		txtRavioliAiPorcini.setBackground(Color.WHITE);
 		txtRavioliAiPorcini.setText("Ravioli ai porcini e scalogno");
 		txtRavioliAiPorcini.setHorizontalAlignment(SwingConstants.CENTER);
 		txtRavioliAiPorcini.setForeground(Color.BLACK);
@@ -179,6 +199,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(spinner_7);
 		
 		txtFaraonaAlCoccio = new JTextField();
+		txtFaraonaAlCoccio.setBackground(Color.WHITE);
 		txtFaraonaAlCoccio.setText("Faraona al coccio");
 		txtFaraonaAlCoccio.setHorizontalAlignment(SwingConstants.CENTER);
 		txtFaraonaAlCoccio.setForeground(Color.BLACK);
@@ -189,6 +210,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtFaraonaAlCoccio);
 		
 		txtGrigliataMistaDi = new JTextField();
+		txtGrigliataMistaDi.setBackground(Color.WHITE);
 		txtGrigliataMistaDi.setText("Grigliata mista di mare");
 		txtGrigliataMistaDi.setHorizontalAlignment(SwingConstants.CENTER);
 		txtGrigliataMistaDi.setForeground(Color.BLACK);
@@ -207,6 +229,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(spinner_6_2);
 		
 		txtPatateAlForno = new JTextField();
+		txtPatateAlForno.setBackground(Color.WHITE);
 		txtPatateAlForno.setText("Patate al forno");
 		txtPatateAlForno.setHorizontalAlignment(SwingConstants.CENTER);
 		txtPatateAlForno.setForeground(Color.BLACK);
@@ -217,6 +240,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtPatateAlForno);
 		
 		txtVerdureGratinate = new JTextField();
+		txtVerdureGratinate.setBackground(Color.WHITE);
 		txtVerdureGratinate.setText("Verdure gratinate");
 		txtVerdureGratinate.setHorizontalAlignment(SwingConstants.CENTER);
 		txtVerdureGratinate.setForeground(Color.BLACK);
@@ -227,6 +251,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtVerdureGratinate);
 		
 		txtInsalataMista = new JTextField();
+		txtInsalataMista.setBackground(Color.WHITE);
 		txtInsalataMista.setText("Insalata mista");
 		txtInsalataMista.setHorizontalAlignment(SwingConstants.CENTER);
 		txtInsalataMista.setForeground(Color.BLACK);
@@ -249,6 +274,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(spinner_3);
 		
 		txtAcqua = new JTextField();
+		txtAcqua.setBackground(Color.WHITE);
 		txtAcqua.setText("Acqua");
 		txtAcqua.setHorizontalAlignment(SwingConstants.CENTER);
 		txtAcqua.setForeground(Color.BLACK);
@@ -259,6 +285,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtAcqua);
 		
 		txtPepsiCola = new JTextField();
+		txtPepsiCola.setBackground(Color.WHITE);
 		txtPepsiCola.setText("Pepsi Cola");
 		txtPepsiCola.setHorizontalAlignment(SwingConstants.CENTER);
 		txtPepsiCola.setForeground(Color.BLACK);
@@ -269,6 +296,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtPepsiCola);
 		
 		txtVinoRosso = new JTextField();
+		txtVinoRosso.setBackground(Color.WHITE);
 		txtVinoRosso.setText("Vino rosso");
 		txtVinoRosso.setHorizontalAlignment(SwingConstants.CENTER);
 		txtVinoRosso.setForeground(Color.BLACK);
@@ -291,6 +319,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(spinner_1_3);
 		
 		txtCaff = new JTextField();
+		txtCaff.setBackground(Color.WHITE);
 		txtCaff.setText("Caff\u00E8");
 		txtCaff.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCaff.setForeground(Color.BLACK);
@@ -301,6 +330,7 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtCaff);
 		
 		txtTiramis = new JTextField();
+		txtTiramis.setBackground(Color.WHITE);
 		txtTiramis.setText("Tiramis\u00F9");
 		txtTiramis.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTiramis.setForeground(Color.BLACK);
@@ -320,16 +350,60 @@ public class Grafica {
 		
 		JButton btnNewButton = new JButton("Ordina");
 		btnNewButton.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		btnNewButton.setBounds(344, 480, 120, 30);
+		btnNewButton.setBounds(25, 473, 130, 30);
 		frmRistorante.getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Resetta");
-		btnNewButton_1.setBounds(557, 501, 120, 30);
-		frmRistorante.getContentPane().add(btnNewButton_1);
+		btnResetta = new JButton("Resetta");
+		btnResetta.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		btnResetta.setBounds(167, 473, 130, 30);
+		frmRistorante.getContentPane().add(btnResetta);
+		
+		btnModifica = new JButton("Modifica");
+		btnModifica.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		btnModifica.setBounds(95, 799, 130, 30);
+		frmRistorante.getContentPane().add(btnModifica);
+		
+		btnCucina = new JButton("Cucina");
+		btnCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		btnCucina.setBounds(335, 799, 130, 30);
+		frmRistorante.getContentPane().add(btnCucina);
+		
+		btnPaga = new JButton("Paga");
+		btnPaga.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		btnPaga.setBounds(782, 799, 130, 30);
+		frmRistorante.getContentPane().add(btnPaga);
+		
+		txtInformazioniBenvenutiAl = new JTextField();
+		txtInformazioniBenvenutiAl.setText("Informazioni: Benvenuti al ristorante \"Da Ruiza\"");
+		txtInformazioniBenvenutiAl.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtInformazioniBenvenutiAl.setForeground(Color.BLACK);
+		txtInformazioniBenvenutiAl.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		txtInformazioniBenvenutiAl.setEditable(false);
+		txtInformazioniBenvenutiAl.setColumns(10);
+		txtInformazioniBenvenutiAl.setBackground(Color.WHITE);
+		txtInformazioniBenvenutiAl.setBounds(309, 473, 840, 30);
+		frmRistorante.getContentPane().add(txtInformazioniBenvenutiAl);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(407, 758, -349, -113);
+		frmRistorante.getContentPane().add(scrollPane);
+		
+		JList list = new JList();
+		list.setModel(new AbstractListModel() {
+			String[] values = new String[] {"ciao", "banana", "ugifdkjf"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+		list.setBounds(0, 0, 1, 1);
+		scrollPane.add(list);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
-		lblNewLabel.setBounds(0, 0, 1200, 900);
+		lblNewLabel.setBounds(0, 0, 1200, 1000);
 		frmRistorante.getContentPane().add(lblNewLabel);
 	}
 
