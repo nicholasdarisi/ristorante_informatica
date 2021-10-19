@@ -5,6 +5,9 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
+import Controller.Controller;
+
 import javax.swing.JSpinner;
 import java.awt.Font;
 import java.awt.Color;
@@ -12,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
 import java.awt.Toolkit;
+import javax.swing.SpinnerNumberModel;
 
 public class Grafica {
 
@@ -84,6 +88,8 @@ public class Grafica {
 		txtMen.setColumns(10);
 		
 		spinner0 = new JSpinner();
+		spinner0.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner0.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner0.setBounds(415, 133, 50, 30);
 		frmRistorante.getContentPane().add(spinner0);
 		
@@ -209,10 +215,14 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtRavioli);
 		
 		spinner1 = new JSpinner();
+		spinner1.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner1.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner1.setBounds(692, 131, 50, 30);
 		frmRistorante.getContentPane().add(spinner1);
 		
 		spinner2 = new JSpinner();
+		spinner2.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner2.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner2.setBounds(782, 174, 50, 30);
 		frmRistorante.getContentPane().add(spinner2);
 		
@@ -239,10 +249,14 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtGrigliata);
 		
 		spinner3 = new JSpinner();
+		spinner3.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner3.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner3.setBounds(1059, 131, 50, 30);
 		frmRistorante.getContentPane().add(spinner3);
 		
 		spinner4 = new JSpinner();
+		spinner4.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner4.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner4.setBounds(1099, 174, 50, 30);
 		frmRistorante.getContentPane().add(spinner4);
 		
@@ -280,14 +294,20 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtInsalata);
 		
 		spinner5 = new JSpinner();
+		spinner5.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner5.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner5.setBounds(185, 307, 50, 30);
 		frmRistorante.getContentPane().add(spinner5);
 		
 		spinner6 = new JSpinner();
+		spinner6.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner6.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner6.setBounds(215, 350, 50, 30);
 		frmRistorante.getContentPane().add(spinner6);
 		
 		spinner7 = new JSpinner();
+		spinner7.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner7.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner7.setBounds(175, 393, 50, 30);
 		frmRistorante.getContentPane().add(spinner7);
 		
@@ -325,14 +345,20 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtVino);
 		
 		spinner8 = new JSpinner();
+		spinner8.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner8.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner8.setBounds(602, 307, 50, 30);
 		frmRistorante.getContentPane().add(spinner8);
 		
 		spinner9 = new JSpinner();
+		spinner9.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner9.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner9.setBounds(632, 350, 50, 30);
 		frmRistorante.getContentPane().add(spinner9);
 		
 		spinner10 = new JSpinner();
+		spinner10.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner10.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner10.setBounds(632, 393, 50, 30);
 		frmRistorante.getContentPane().add(spinner10);
 		
@@ -359,10 +385,14 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtTiramisu);
 		
 		spinner11 = new JSpinner();
+		spinner11.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner11.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner11.setBounds(969, 307, 50, 30);
 		frmRistorante.getContentPane().add(spinner11);
 		
 		spinner12 = new JSpinner();
+		spinner12.setModel(new SpinnerNumberModel(0, 0, 999, 1));
+		spinner12.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		spinner12.setBounds(969, 350, 50, 30);
 		frmRistorante.getContentPane().add(spinner12);
 		
@@ -428,20 +458,26 @@ public class Grafica {
 		frmRistorante.setVisible(true);
 	}
 	
+	public void registraController(Controller controller) {
+		btnOrdina.addActionListener(controller);
+		btnResetta.addActionListener(controller);
+		btnModifica.addActionListener(controller);
+		btnCucina.addActionListener(controller);
+		btnPaga.addActionListener(controller);
+	}
+	
 	public JButton getButton(int type) {
         switch (type) {
             case 0:
-                //return btnNewButton;
+                return btnOrdina;
             case 1:
-                //return btnNewButton_1;
+                return btnResetta;
             case 2:
-                //return btnNewButton_2;
+                return btnModifica;
             case 3:
-                //return btnNewButton_3;
+                return btnCucina;
             case 4:
-                //return btnNewButton_4;
-            case 5:
-                //return btnNewButton_5;
+                return btnPaga;
         }
         return null;
     }
