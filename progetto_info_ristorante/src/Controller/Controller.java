@@ -26,6 +26,7 @@ public class Controller implements ActionListener{
 		this.cas = cas;
 		this.o = o;
 		this.g = g;
+		g.registraController(this);
 	}
 	
 	public void inizio() {
@@ -44,7 +45,7 @@ public class Controller implements ActionListener{
 		
 		//reset
 		if (e.getSource() == g.getButton(1)) {
-			//g.reset();
+			g.reset();
 		}
 		
 		//cucina
