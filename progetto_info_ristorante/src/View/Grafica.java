@@ -481,4 +481,20 @@ public class Grafica {
         }
         return null;
     }
+
+	public void reset() {
+		spinner0.setValue(0);
+		spinner1.setValue(0);
+		spinner2.setValue(0);
+		spinner3.setValue(0);
+		spinner4.setValue(0);
+		spinner5.setValue(0);
+		spinner6.setValue(0);
+		spinner7.setValue(0);
+		spinner8.setValue(0);
+		spinner9.setValue(0);
+		spinner10.setValue(0);
+		spinner11.setValue(0);
+		spinner12.setValue(0);
+	}
 }
