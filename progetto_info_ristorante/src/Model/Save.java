@@ -1,16 +1,13 @@
 package Model;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 /**
  * @author Oniichan
  * @data 18/10/2021
  * @project ristorante_informatica
  */
-public class Save {
+public class Save{
     public static String filePath;
     static {
         filePath = "ordine.dar";
