@@ -385,8 +385,10 @@ public class Grafica {
 		frmRistorante.getContentPane().add(txtInformazioniBenvenutiAl);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(407, 758, -349, -113);
+		scrollPane.setBounds(105, 640, 349, 113);
 		frmRistorante.getContentPane().add(scrollPane);
+        scrollPane.getViewport().setOpaque(false);
+
 		
 		JList list = new JList();
 		list.setModel(new AbstractListModel() {
