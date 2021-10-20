@@ -101,7 +101,7 @@ public class Grafica {
 		txtCucina.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCucina.setEditable(false);
 		txtCucina.setColumns(10);
-		txtCucina.setBounds(782, 553, 116, 50);
+		txtCucina.setBounds(215, 553, 116, 50);
 		frmRistorante.getContentPane().add(txtCucina);
 		
 		txtTavoli = new JTextField();
@@ -112,7 +112,7 @@ public class Grafica {
 		txtTavoli.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTavoli.setEditable(false);
 		txtTavoli.setColumns(10);
-		txtTavoli.setBounds(215, 553, 116, 50);
+		txtTavoli.setBounds(782, 553, 116, 50);
 		frmRistorante.getContentPane().add(txtTavoli);
 		
 		txtAntipasti = new JTextField();
@@ -450,7 +450,7 @@ public class Grafica {
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
-		lblSfondo.setBounds(0, 0, 1200, 1000);
+		lblSfondo.setBounds(0, 0, 1200, 865);
 		frmRistorante.getContentPane().add(lblSfondo);
 	}
 
