@@ -13,12 +13,15 @@ public class Cameriere {
      * @param nome
      */
     public Cameriere(String nome) {
-        super();
         this.nome = nome;
     }
 
 
     public String receiveOrder(int ordinazione[]) {
+        if(ordini.getOrdini().size() >= 10){
+            return nome + " : non abbiamo altri tavoli !!!";
+        }
+
         final int[] i = {0};
         int numTav = ordini.ordini.size() - 1;
         ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
