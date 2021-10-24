@@ -2,10 +2,12 @@ package View;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import Controller.Controller_menu;
 import Controller.Controller_paga;
 
 import javax.swing.JSpinner;
@@ -392,7 +394,7 @@ public class Grafica_menu {
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
-		lblSfondo.setBounds(0, 0, 1200, 1000);
+		lblSfondo.setBounds(0, 0, 1194, 607);
 		frmMenu.getContentPane().add(lblSfondo);
 	}
 
@@ -400,7 +402,7 @@ public class Grafica_menu {
 		frmMenu.setVisible(true);
 	}
 	
-	public void registraController(Controller_paga controller) {
+	public void registraController(Controller_menu controller) {
 		btnOrdina.addActionListener(controller);
 		btnResetta.addActionListener(controller);
 		btnModifica.addActionListener(controller);
@@ -433,4 +435,89 @@ public class Grafica_menu {
 		spinner11.setValue(0);
 		spinner12.setValue(0);
 	}
+	
+	public int[] getOrdine() {
+		int[] piatti = new int[13];
+		try {
+			piatti[0] = Integer.parseInt((String) spinner0.getValue());
+		} catch (Exception e) {
+			piatti[0] = 0;
+		}
+		try {
+			piatti[1] = Integer.parseInt((String) spinner1.getValue());
+		} catch (Exception e) {
+			piatti[1] = 0;
+		}
+		try {
+			piatti[2] = Integer.parseInt((String) spinner2.getValue());
+		} catch (Exception e) {
+			piatti[2] = 0;
+		}
+		try {
+			piatti[3] = Integer.parseInt((String) spinner3.getValue());
+		} catch (Exception e) {
+			piatti[3] = 0;
+		}
+		try {
+			piatti[4] = Integer.parseInt((String) spinner4.getValue());
+		} catch (Exception e) {
+			piatti[4] = 0;
+		}
+		try {
+			piatti[5] = Integer.parseInt((String) spinner5.getValue());
+		} catch (Exception e) {
+			piatti[5] = 0;
+		}
+		try {
+			piatti[6] = Integer.parseInt((String) spinner6.getValue());
+		} catch (Exception e) {
+			piatti[6] = 0;
+		}
+		try {
+			piatti[7] = Integer.parseInt((String) spinner7.getValue());
+		} catch (Exception e) {
+			piatti[7] = 0;
+		}
+		try {
+			piatti[8] = Integer.parseInt((String) spinner8.getValue());
+		} catch (Exception e) {
+			piatti[8] = 0;
+		}
+		try {
+			piatti[9] = Integer.parseInt((String) spinner9.getValue());
+		} catch (Exception e) {
+			piatti[9] = 0;
+		}
+		try {
+			piatti[10] = Integer.parseInt((String) spinner10.getValue());
+		} catch (Exception e) {
+			piatti[10] = 0;
+		}
+		try {
+			piatti[11] = Integer.parseInt((String) spinner11.getValue());
+		} catch (Exception e) {
+			piatti[11] = 0;
+		}
+		try {
+			piatti[12] = Integer.parseInt((String) spinner12.getValue());
+		} catch (Exception e) {
+			piatti[12] = 0;
+		}
+		for (int i=0; i<13 ; i++) {
+			if (piatti[i]<0) {
+				piatti[i]=0;
+			}
+		}
+		reset();
+		return piatti;
+	}
+	
+	public int getIndex() {
+		return listMenu.getSelectedIndex();
+	}
+	
+	public void setList(DefaultListModel<String> d) {
+		listMenu.setModel(d);
+	}
+	
 }

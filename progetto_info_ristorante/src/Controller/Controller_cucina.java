@@ -26,7 +26,7 @@ public class Controller_cucina implements ActionListener{
 		this.cas = cas;
 		this.o = o;
 		this.g = g;
-		g.registraController_cucina(this);
+		g.registraController(this);
 	}
 	
 	public void inizio() {

@@ -5,10 +5,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import Controller.Controller_cucina;
 import Controller.Controller_paga;
 
 import java.awt.Font;
 import java.awt.Color;
+
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
@@ -67,7 +70,8 @@ public class Grafica_cucina {
 		frmRistorante.setVisible(true);
 	}
 	
-	public void registraController(Controller_paga controller) {
+
+	public void registraController(Controller_cucina controller) {
 		btnConsegna.addActionListener(controller);
 	}
 	
@@ -78,4 +82,13 @@ public class Grafica_cucina {
         }
         return null;
     }
+	
+	public int getIndex() {
+		return listCucina.getSelectedIndex();
+	}
+	
+	public void setList(DefaultListModel<String> d) {
+		listCucina.setModel(d);
+	}
+	
 }
