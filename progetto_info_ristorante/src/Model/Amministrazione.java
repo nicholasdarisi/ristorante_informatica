@@ -17,15 +17,21 @@ public class Amministrazione {
         return nome + " : ordine preso";
     }
 
-    public String ChangeOrder(String name,int qty,int tavolo){
-        ordini.ordini.get(tavolo).replace(name,qty);
-
-        return nome + " : Piatto " + name + "" + " modificato con successo !!";
+    public String ChangeOrder(int ordinazioni[] ,int tavolo){
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+            ordine.setValue(ordinazioni[i++]);
+        }
+        Save.saveOrdine(ordini);
+        return nome + " : tavolo " + tavolo + "" + " modificato con successo !!";
     }
 
-    public String DeleteOrder(String name,int tavolo){
-        ordini.ordini.get(tavolo).replace(name,0);
-
-        return nome + " : Piatto " + name + " eliminato con successo !!";
+    public String DeleteOrder(int tavolo){
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+            ordine.setValue(0);
+        }
+        Save.saveOrdine(ordini);
+        return nome + " : tavolo " + tavolo + " eliminato con successo !!";
     }
 }

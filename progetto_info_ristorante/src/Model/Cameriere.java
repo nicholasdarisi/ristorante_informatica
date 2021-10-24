@@ -21,16 +21,13 @@ public class Cameriere {
         if(ordini.getOrdini().size() >= 10){
             return nome + " : non abbiamo altri tavoli !!!";
         }
-
-        final int[] i = {0};
         int numTav = ordini.ordini.size() - 1;
         ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
-        ordini.ordini.get(numTav).forEach(
-                (String key, Integer value) -> {
-                    ordini.ordini.get(numTav).replace(key, ordinazione[i[0]]);
-                    i[0]++;
-                }
-        );
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(numTav).entrySet() ){
+            ordine.setValue(ordinazione[i]);
+            i++;
+        }
         Save.saveOrdine(ordini);
         return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
     }
