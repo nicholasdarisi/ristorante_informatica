@@ -21,7 +21,7 @@ public class Cameriere {
         if(ordini.getOrdini().size() >= 10){
             return nome + " : non abbiamo altri tavoli !!!";
         }
-        int numTav = ordini.ordini.size() - 1;
+        int numTav = ordini.ordini.size();
         ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
         int i = 0;
         for(Map.Entry<String, Integer> ordine : ordini.ordini.get(numTav).entrySet() ){
