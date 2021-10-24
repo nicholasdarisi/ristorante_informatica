@@ -39,8 +39,12 @@ public class Controller_paga implements ActionListener{
 	
 		//paga
 		if (e.getSource() == g.getButton(0)) {
-			
-			
+			//int i = g.getIndex();
+			//if (i >= 0){
+			//g.setImporto(cas.calcolaImporto(i));
+			//g.Remove(i);
+			//}
+			//g.setText("Seleziona qualcosa");
 		}
 		
 	}
