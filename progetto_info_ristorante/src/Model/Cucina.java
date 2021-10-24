@@ -29,6 +29,7 @@ public class Cucina {
                     ordini.ordini.get(tavolo).replace(key ,0);
                 }
         );
+        Save.saveOrdine(ordini);
         return result[0];
     }
 

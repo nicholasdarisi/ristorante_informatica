@@ -31,6 +31,7 @@ public class Cameriere {
                     i[0]++;
                 }
         );
+        Save.saveOrdine(ordini);
         return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
     }
 
