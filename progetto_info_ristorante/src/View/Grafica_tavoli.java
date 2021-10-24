@@ -3,16 +3,20 @@ package View;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 
 import Controller.Controller;
 
 import java.awt.Font;
 import java.awt.Color;
+
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 
 public class Grafica_tavoli {
 
@@ -79,7 +83,7 @@ public class Grafica_tavoli {
 		frmTavoli.setVisible(true);
 	}
 	
-	public void registraController(Controller controller) {
+	public void registraController(Controller_paga controller) {
 		btnPaga.addActionListener(controller);
 	}
 	
@@ -90,4 +94,17 @@ public class Grafica_tavoli {
         }
         return null;
     }
+	
+	public int getIndex() {
+		return listTavoli.getSelectedIndex();
+	}
+	
+	public void setList(DefaultListModel<String> d) {
+		listTavoli.setModel(d);
+	}
+	
+	public void setImporto(float i) {
+		txtPagamento.setText("Importo da pagare: " + i + "$");
+	}
+	
 }
