@@ -12,7 +12,7 @@ public class Save{
     static {
         filePath = "ordine.dar";
     }
-    public void saveOrdine(Ordine ordine) {
+    public static void saveOrdine(Ordine ordine) {
         try {
             FileOutputStream fos = new FileOutputStream(filePath);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -22,7 +22,7 @@ public class Save{
         } catch (Exception e) {}
     }
 
-    public Ordine loadOrdine(){
+    public static Ordine loadOrdine(){
         try {
             FileInputStream fis = new FileInputStream(filePath);
             ObjectInputStream ois = new ObjectInputStream(fis);
