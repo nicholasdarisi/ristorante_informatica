@@ -4,9 +4,9 @@ import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.Map;
 
-public class Cucina extends Ordine {
+public class Cucina {
+    private Ordine ordini;
     private String nome;
-    private String piatti;
 
 
     /***
@@ -14,24 +14,23 @@ public class Cucina extends Ordine {
      * @param nome
      */
     public Cucina(String nome){
-        super();
         this.nome = nome;
     }
 
-    public String receiveOrder( Map<String, Integer> ordini){
+    public String receiveOrder( Ordine ordini){
         this.ordini = ordini;
 
         return " Ordine e stato ricevuto !!";
     }
 
-    public String CockOrder(){
-        final String[] result = {""};
-        ordini.forEach(
+    public String CookOrder(int tavolo){
+        final String[] result = {nome + " : \n"};
+        ordini.ordini.get(tavolo).forEach(
                 (String key, Integer value) -> {
                     if(value > 0){
                         result[0] += value + (value > 1 ? "Piatti " : " Piatto") + " di " + key + " sono stati preparati !!";
                     }
-                    ordini.replace(key ,0);
+                    ordini.ordini.get(tavolo).replace(key ,0);
                 }
         );
         return result[0];

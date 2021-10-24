@@ -1,21 +1,31 @@
 package Model;
 
-public class Amministrazione extends Ordine{
-    public Amministrazione(){
+import javafx.scene.control.Tab;
 
+import java.util.Map;
+
+public class Amministrazione {
+    public String nome;
+    public Ordine ordini;
+    public Amministrazione(String nome ){
+        this.nome = nome;
     }
 
+    public String getOrder(Ordine ordine){
+        ordini = ordine;
 
-
-    public String ChangeOrder(String name,int qty){
-        ordini.replace(name,qty);
-
-        return "Piatto " + name + " modificato con successo !!";
+        return nome + " : ordine preso";
     }
 
-    public String DeleteOrder(String key){
-        ordini.replace(key,0);
+    public String ChangeOrder(String name,int qty,int tavolo){
+        ordini.ordini.get(tavolo).replace(name,qty);
 
-        return "Piatto " + key + " eliminato con successo !!";
+        return nome + " : Piatto " + name + "" + " modificato con successo !!";
+    }
+
+    public String DeleteOrder(String name,int tavolo){
+        ordini.ordini.get(tavolo).replace(name,0);
+
+        return nome + " : Piatto " + name + " eliminato con successo !!";
     }
 }

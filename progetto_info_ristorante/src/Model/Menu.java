@@ -35,4 +35,11 @@ public class Menu {
         menu.put("Tiramisu",0);
 
     }
+    protected Map<String ,Integer> copyMenu(){
+        Map<String, Integer> menu = new HashMap<String, Integer>(this.menu);
+        return menu;
+    }
+    public static Map<String ,Integer> getNewMenu(){
+        return menu;
+    }
 }
