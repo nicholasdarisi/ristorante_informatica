@@ -2,21 +2,23 @@ package View;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 
 import Controller.Controller_menu;
-import Controller.Controller_paga;
-
 import javax.swing.JSpinner;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
 import java.awt.Toolkit;
+import java.util.ArrayList;
+
 import javax.swing.SpinnerNumberModel;
 
 public class Grafica_menu {
@@ -61,6 +63,8 @@ public class Grafica_menu {
 	private JButton btnModifica;
 	private JList<String> listMenu;
 	private JScrollPane scrollPaneMenu;
+	private JTextField txtInformazioni;
+	private ListModel<String> model;
 	
 	public Grafica_menu() {
 		frmMenu = new JFrame();
@@ -78,7 +82,7 @@ public class Grafica_menu {
 		txtMen.setHorizontalAlignment(SwingConstants.CENTER);
 		txtMen.setText("Men\u00F9");
 		txtMen.setEditable(false);
-		txtMen.setBounds(542, 13, 120, 50);
+		txtMen.setBounds(25, 13, 120, 50);
 		frmMenu.getContentPane().add(txtMen);
 		txtMen.setColumns(10);
 		
@@ -385,12 +389,24 @@ public class Grafica_menu {
 		frmMenu.getContentPane().add(btnModifica);
 		
 		listMenu = new JList<String>();
+		listMenu.setModel(model);
 		listMenu.setBounds(105, 640, 349, 113);
 		
 		scrollPaneMenu = new JScrollPane(listMenu);
 		scrollPaneMenu.setBounds(185, 473, 964, 116);
 		frmMenu.getContentPane().add(scrollPaneMenu);
         scrollPaneMenu.getViewport().setOpaque(false);
+		
+		txtInformazioni = new JTextField();
+		txtInformazioni.setText("Benvenuti al ristorante da Ruiza");
+		txtInformazioni.setHorizontalAlignment(SwingConstants.CENTER);
+		txtInformazioni.setForeground(Color.BLACK);
+		txtInformazioni.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		txtInformazioni.setEditable(false);
+		txtInformazioni.setColumns(10);
+		txtInformazioni.setBackground(Color.WHITE);
+		txtInformazioni.setBounds(157, 25, 992, 30);
+		frmMenu.getContentPane().add(txtInformazioni);
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
@@ -516,8 +532,14 @@ public class Grafica_menu {
 		return listMenu.getSelectedIndex();
 	}
 	
-	public void setList(DefaultListModel<String> d) {
-		listMenu.setModel(d);
+	public void setList(ArrayList<?> a) {
+		listMenu.removeAll();
+		for(int i=0; i<a.size(); i++) {
+			listMenu.add((Component) a.get(i));
+		}
 	}
 	
+	public void remove(int i) {
+		listMenu.remove(i);
+	}
 }

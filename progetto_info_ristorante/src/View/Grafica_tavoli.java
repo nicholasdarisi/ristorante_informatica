@@ -3,13 +3,13 @@ package View;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 
 import Controller.Controller_paga;
 
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.Component;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -27,6 +27,7 @@ public class Grafica_tavoli {
 	private JList<String> listTavoli;
 	private JScrollPane scrollPaneTavoli;
 	private JLabel lblSfondo;
+	private DefaultListModel<String> model;
 	
 	public Grafica_tavoli() {
 		frmTavoli = new JFrame();
@@ -65,6 +66,7 @@ public class Grafica_tavoli {
 		frmTavoli.getContentPane().add(txtPagamento);
 		
 		listTavoli = new JList<String>();
+		listTavoli.setModel(model);
 		listTavoli.setBounds(105, 640, 349, 113);
 		
 		scrollPaneTavoli = new JScrollPane(listTavoli);
@@ -99,8 +101,15 @@ public class Grafica_tavoli {
 		return listTavoli.getSelectedIndex();
 	}
 	
-	public void setList(DefaultListModel<String> d) {
-		listTavoli.setModel(d);
+	public void setList(ArrayList<?> a) {
+		listTavoli.removeAll();
+		for(int i=0; i<a.size(); i++) {
+			listTavoli.add((Component) a.get(i));
+		}
+	}
+	
+	public void remove(int i) {
+		listTavoli.remove(i);
 	}
 	
 	public void setImporto(float i) {

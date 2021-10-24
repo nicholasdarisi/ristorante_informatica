@@ -6,16 +6,16 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import Controller.Controller_cucina;
-import Controller.Controller_paga;
-
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.Component;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 
 public class Grafica_cucina {
 
@@ -25,6 +25,8 @@ public class Grafica_cucina {
 	private JList<String> listCucina;
 	private JScrollPane scrollPaneCucina;
 	private JLabel lblSfondo;
+	private JTextField txtScegliUnPiatto;
+	private DefaultListModel<String> model;
 	
 	public Grafica_cucina() {
 		frmRistorante = new JFrame();
@@ -52,12 +54,24 @@ public class Grafica_cucina {
 		frmRistorante.getContentPane().add(btnConsegna);
         
         listCucina = new JList<String>();
+        listCucina.setModel(model);
 		listCucina.setBounds(105, 640, 349, 113);
 		
 		scrollPaneCucina = new JScrollPane(listCucina);
 		scrollPaneCucina.setBounds(12, 76, 797, 284);
 		frmRistorante.getContentPane().add(scrollPaneCucina);
         scrollPaneCucina.getViewport().setOpaque(false);
+		
+		txtScegliUnPiatto = new JTextField();
+		txtScegliUnPiatto.setText("Scegli un piatto da cucinare");
+		txtScegliUnPiatto.setHorizontalAlignment(SwingConstants.CENTER);
+		txtScegliUnPiatto.setForeground(Color.BLACK);
+		txtScegliUnPiatto.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		txtScegliUnPiatto.setEditable(false);
+		txtScegliUnPiatto.setColumns(10);
+		txtScegliUnPiatto.setBackground(Color.WHITE);
+		txtScegliUnPiatto.setBounds(140, 26, 527, 30);
+		frmRistorante.getContentPane().add(txtScegliUnPiatto);
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setBackground(Color.GREEN);
@@ -87,8 +101,15 @@ public class Grafica_cucina {
 		return listCucina.getSelectedIndex();
 	}
 	
-	public void setList(DefaultListModel<String> d) {
-		listCucina.setModel(d);
+	public void setList(ArrayList<?> a) {
+		listCucina.removeAll();
+		for(int i=0; i<a.size(); i++) {
+			listCucina.add((Component) a.get(i));
+		}
+	}
+	
+	public void remove(int i) {
+		listCucina.remove(i);
 	}
 	
 }
