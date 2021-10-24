@@ -6,7 +6,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import Controller.Controller;
+import Controller.Controller_paga;
 
 import javax.swing.JSpinner;
 import java.awt.Font;
@@ -458,7 +458,7 @@ public class Grafica {
 		frmRistorante.setVisible(true);
 	}
 	
-	public void registraController(Controller controller) {
+	public void registraController(Controller_paga controller) {
 		btnOrdina.addActionListener(controller);
 		btnResetta.addActionListener(controller);
 		btnModifica.addActionListener(controller);

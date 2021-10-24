@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import Controller.Controller;
+import Controller.Controller_paga;
 
 import java.awt.Font;
 import java.awt.Color;
@@ -79,7 +79,7 @@ public class Grafica_tavoli {
 		frmTavoli.setVisible(true);
 	}
 	
-	public void registraController(Controller controller) {
+	public void registraController(Controller_paga controller) {
 		btnPaga.addActionListener(controller);
 	}
 	

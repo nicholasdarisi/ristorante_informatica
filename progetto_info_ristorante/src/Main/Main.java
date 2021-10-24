@@ -2,7 +2,7 @@ package Main;
 
 import java.io.Serializable;
 
-import Controller.Controller;
+import Controller.Controller_paga;
 import Model.Amministrazione;
 import Model.Cameriere;
 import Model.Cucina;
@@ -19,7 +19,7 @@ public class Main {
 		Cassa cas;
 		Ordine o;
 		Grafica g = new Grafica();
-		Controller c = new Controller(null, null, null, null, null, g);
+		Controller_paga c = new Controller_paga(null, null, null, null, null, g);
 		c.inizio();
 	}
 
