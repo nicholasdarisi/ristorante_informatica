@@ -21,7 +21,6 @@ public class Controller_ValueChanged_Menu implements ListSelectionListener{
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
-		c.refreshOrder();
 		g.setSpinner(c.getOrder().getTavolo(g.getIndex()));
 	}
 

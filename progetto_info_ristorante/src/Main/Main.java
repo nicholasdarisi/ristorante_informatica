@@ -30,6 +30,9 @@ public class Main {
 		Controller_ValueChanged_Menu controller_valueChanged_menu = new Controller_ValueChanged_Menu(cam,g_m);
 		Controller_ValueChanged_Cucina controller_valueChanged_cucina = new Controller_ValueChanged_Cucina(cuc,g_c);
 		Controller_ValueChanged_Paga controller_valueChanged_paga = new Controller_ValueChanged_Paga(cas,g_t);
+
+		new Thread(new RefreshOrder(cuc,cas,cam,g_t,g_c,g_m)).start();
+
 		c_p.inizio();
 		c_c.inizio();
 		c_m.inizio();

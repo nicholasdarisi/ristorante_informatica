@@ -16,48 +16,48 @@ public class Cameriere {
         this.nome = nome;
     }
 
-    public void setOrdini(Ordine ordine){
+    public void setOrdini(Ordine ordine) {
         this.ordini = ordine;
     }
 
-    public void refreshOrder(){
+    public void refreshOrder() {
         this.ordini = Save.loadOrdine();
     }
 
     public String receiveOrder(int ordinazione[]) {
-        System.out.println(ordinazione[0]);
-        if(!ordini.tavoliLeft()){
+        if (!ordini.tavoliLeft()) {
             return nome + " : non abbiamo altri tavoli !!!";
         }
         int numTav = ordini.ordini.size();
-        if(numTav == 10)
+        if (numTav == 10)
             numTav = ordini.firstTavAvaiable();
         else
-        ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
+            ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
         int i = 0;
-        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(numTav).entrySet() ){
-            ordine.setValue(ordinazione[i]);
+        for (Map.Entry<String, Integer> ordine : ordini.ordini.get(numTav).entrySet()) {
+            if (ordinazione[i] > 99) ordine.setValue(99);
+            else
+                ordine.setValue(ordinazione[i]);
             i++;
         }
-        System.out.println(ordini.isTavolo(0) + " : " + ordini.isTavolo(1) + " : " + ordini.isTavolo(2));
         Save.saveOrdine(ordini);
-        return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
+        return nome + " : Tutti i piatti del tavolo " + numTav + " sono stati inseriti !!!";
     }
 
-    public String ChangeOrder(int ordinazioni[] ,int tavolo){
-        if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
+    public String ChangeOrder(int ordinazioni[], int tavolo) {
+        if (!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         int i = 0;
-        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+        for (Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet()) {
             ordine.setValue(ordinazioni[i++]);
         }
         Save.saveOrdine(ordini);
         return nome + " : tavolo " + tavolo + "" + " modificato con successo !!";
     }
 
-    public String DeleteOrder(int tavolo){
-        if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
+    public String DeleteOrder(int tavolo) {
+        if (!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         int i = 0;
-        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+        for (Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet()) {
             ordine.setValue(0);
         }
         Save.saveOrdine(ordini);
@@ -65,11 +65,9 @@ public class Cameriere {
     }
 
 
-
     public Ordine getOrder() {
         return ordini;
     }
-
 
 
 }

@@ -21,7 +21,6 @@ public class Controller_ValueChanged_Paga implements ListSelectionListener{
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
-		c.refreshOrder();
 		g.setList(c.getOrder().getTavolo(g.getIndex()));
 		g.setImporto(c.calcolaImporto(g.getIndex()));
 		//g.setNumeri(o.getTavolo(g.getIndex()));

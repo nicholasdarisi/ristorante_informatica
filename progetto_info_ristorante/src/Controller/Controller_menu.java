@@ -48,6 +48,8 @@ public class Controller_menu implements ActionListener{
 			if (i >=0){
 			check = cam.ChangeOrder(g.getOrdine(), i);
 			g.setLabel(check);
+			if (g.getIndex() != -1)
+				g.setSpinner(cam.getOrder().getTavolo(g.getIndex()));
 			}
 		}
 

@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Map;
+
 public class Cucina {
     private Ordine ordini;
     private String nome;
@@ -25,16 +27,14 @@ public class Cucina {
 
     public String CookOrder(int tavolo){
         if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
-        final String[] result = {nome + " : \n"};
-        ordini.ordini.get(tavolo).forEach(
-                (String key, Integer value) -> {
-                    if(value > 0){
-                        result[0] += value + (value > 1 ? " Piatti " : " Piatto") + " di " + key + " sono stati preparati !!";
-                    }
-                    ordini.ordini.get(tavolo).replace(key ,0);
-                }
-        );
-        return result[0];
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+            ordini.qty[tavolo][i] = ordine.getValue();
+            i++;
+        }
+
+        Save.saveOrdine(ordini);
+        return nome + " : Tutti i piatti del tavolo " + tavolo + " sono stati preparati !!!";
     }
 
     public Ordine getOrder(){
