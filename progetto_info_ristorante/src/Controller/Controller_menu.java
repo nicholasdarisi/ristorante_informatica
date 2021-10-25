@@ -42,9 +42,7 @@ public class Controller_menu implements ActionListener{
 		if (e.getSource() == g.getButton(0)) { 
 			check = cam.receiveOrder(g.getOrdine());
 			g.setLabel(check);
-			o = Save.loadOrdine();
-			g.setList(o.getOrdini());
-			g_c.setList(o.getOrdini());
+			Save.saveOrdine(o);
 		}
 		
 		//reset
@@ -57,17 +55,21 @@ public class Controller_menu implements ActionListener{
 		if (e.getSource() == g.getButton(2)) {
 			int i = g.getIndex();
 			if (i >=0){
-			cam.ChangeOrder(g.getOrdine(), i);
+			check = cam.ChangeOrder(g.getOrdine(), i);
 			g.setLabel(check);
 			o = Save.loadOrdine();
-			g.setList(o.getOrdini());
-			g_c.setList(o.getOrdini());
 			}
-			g.setLabel("Seleziona qualcosa");
-			
 		}
 
-		
+		if (e.getSource() == g.getButton(3)) {
+			int i = g.getIndex();
+			if (i >=0){
+				check = cam.DeleteOrder(i);
+				g.setLabel(check);
+				o = Save.loadOrdine();
+			}
+			g.reset();
+		}
 	}
 
 }

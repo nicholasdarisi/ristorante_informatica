@@ -24,6 +24,7 @@ public class Cucina {
     }
 
     public String CookOrder(int tavolo){
+        if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         final String[] result = {nome + " : \n"};
         ordini.ordini.get(tavolo).forEach(
                 (String key, Integer value) -> {

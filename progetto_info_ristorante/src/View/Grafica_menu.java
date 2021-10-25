@@ -1,26 +1,17 @@
 package View;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.JTextField;
-import javax.swing.ListModel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 
 import Controller.Controller_ValueChanged_Menu;
 import Controller.Controller_menu;
-import javax.swing.JSpinner;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.Component;
 
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
-import javax.swing.JList;
 import java.awt.Toolkit;
 import java.util.ArrayList;
-
-import javax.swing.SpinnerNumberModel;
+import java.util.Map;
 
 public class Grafica_menu {
 
@@ -65,7 +56,7 @@ public class Grafica_menu {
 	private JList<String> listMenu;
 	private JScrollPane scrollPaneMenu;
 	private JTextField txtInfo;
-	private ListModel<String> model;
+	private DefaultListModel<String> model = new DefaultListModel<String>();
 	private JButton btnCancella;
 	
 	public Grafica_menu() {
@@ -389,7 +380,9 @@ public class Grafica_menu {
 		btnModifica.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		btnModifica.setBounds(1019, 297, 130, 30);
 		frmMenu.getContentPane().add(btnModifica);
-		
+
+		startModel();
+
 		listMenu = new JList<String>();
 		listMenu.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		listMenu.setModel(model);
@@ -546,12 +539,22 @@ public class Grafica_menu {
 	public int getIndex() {
 		return listMenu.getSelectedIndex();
 	}
-	
-	public void setList(ArrayList<?> a) {
-		listMenu.removeAll();
-		for(int i=0; i<a.size(); i++) {
-			listMenu.add((Component) a.get(i));
-		}
+
+	public void setList(int qty[]) {
+		spinner0.setValue(qty[0] + "");
+		spinner1.setValue(qty[1] + "");
+		spinner2.setValue(qty[2] + "");
+		spinner3.setValue(qty[3] + "");
+		spinner4.setValue(qty[4] + "");
+		spinner5.setValue(qty[5] + "");
+		spinner6.setValue(qty[6] + "");
+		spinner7.setValue(qty[7] + "");
+		spinner8.setValue(qty[8] + "");
+		spinner9.setValue(qty[9] + "");
+		spinner10.setValue(qty[10] + "");
+		spinner11.setValue(qty[11] + "");
+		spinner12.setValue(qty[12] + "");
+
 	}
 	
 	public void remove(int i) {
@@ -577,4 +580,11 @@ public class Grafica_menu {
 		spinner11.setValue(a[11]);
 		spinner12.setValue(a[12]);
 	}
+
+	public void startModel(){
+		for(int i = 0; i < 10 ; i++){
+			model.add(i,"Tavolo " + i);
+		}
+	}
+
 }

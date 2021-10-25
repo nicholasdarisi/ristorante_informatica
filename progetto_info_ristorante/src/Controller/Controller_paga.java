@@ -38,9 +38,7 @@ public class Controller_paga implements ActionListener{
 			int i = g.getIndex();
 			if (i >= 0){
 			g.setImporto(cas.calcolaImporto(i));
-			g.remove(i);
 			}
-			//g.setLabel("Seleziona qualcosa");
 		}
 		
 	}

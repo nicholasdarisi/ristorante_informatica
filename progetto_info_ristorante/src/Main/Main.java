@@ -18,6 +18,11 @@ public class Main {
 		Cucina cuc = new Cucina("Cucina");
 		Cassa cas = new Cassa("Cassa");
 		Ordine o = new Ordine();
+		Ordine o1 = new Ordine();
+		Ordine o2 = new Ordine();
+		cam.setOrdini(o);
+		cuc.setOrder(o1);
+		cas.setOrder(o2);
 		Grafica_cucina g_c = new Grafica_cucina();
 		Grafica_menu g_m = new Grafica_menu();
 		Grafica_tavoli g_t = new Grafica_tavoli();

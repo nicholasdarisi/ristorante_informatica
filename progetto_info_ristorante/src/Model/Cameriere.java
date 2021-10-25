@@ -25,10 +25,13 @@ public class Cameriere {
     }
 
     public String receiveOrder(int ordinazione[]) {
-        if(ordini.getOrdini().size() >= 10){
+        if(!ordini.tavoliLeft()){
             return nome + " : non abbiamo altri tavoli !!!";
         }
         int numTav = ordini.ordini.size();
+        if(numTav == 10)
+            numTav = ordini.firstTavAvaiable();
+        else
         ordini.ordini.add(new HashMap<String, Integer>(Menu.getNewMenu()));
         int i = 0;
         for(Map.Entry<String, Integer> ordine : ordini.ordini.get(numTav).entrySet() ){
@@ -40,6 +43,7 @@ public class Cameriere {
     }
 
     public String ChangeOrder(int ordinazioni[] ,int tavolo){
+        if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         int i = 0;
         for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
             ordine.setValue(ordinazioni[i++]);
@@ -49,6 +53,7 @@ public class Cameriere {
     }
 
     public String DeleteOrder(int tavolo){
+        if(!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         int i = 0;
         for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
             ordine.setValue(0);

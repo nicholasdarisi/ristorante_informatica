@@ -29,7 +29,7 @@ public class Grafica_cucina {
 	private JScrollPane scrollPaneCucina;
 	private JLabel lblSfondo;
 	private JTextField txtInfo;
-	private DefaultListModel<String> model;
+	private DefaultListModel<String> model = new DefaultListModel<String>();
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -87,7 +87,10 @@ public class Grafica_cucina {
 		btnConsegna.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		btnConsegna.setBounds(959, 26, 130, 30);
 		frmCucina.getContentPane().add(btnConsegna);
-        
+
+		startModel();
+
+
         listCucina = new JList<String>();
         listCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
         listCucina.setModel(model);
@@ -492,11 +495,20 @@ public class Grafica_cucina {
 		return listCucina.getSelectedIndex();
 	}
 	
-	public void setList(ArrayList<?> a) {
-		listCucina.removeAll();
-		for(int i=0; i<a.size(); i++) {
-			listCucina.add((Component) a.get(i));
-		}
+	public void setList(int qty[]) {
+		textField.setText(qty[0] + "");
+		textField1.setText(qty[1] + "");
+		textField2.setText(qty[2] + "");
+		textField3.setText(qty[3] + "");
+		textField4.setText(qty[4] + "");
+		textField5.setText(qty[5] + "");
+		textField6.setText(qty[6] + "");
+		textField7.setText(qty[7] + "");
+		textField8.setText(qty[8] + "");
+		textField9.setText(qty[9] + "");
+		textField10.setText(qty[10] + "");
+		textField11.setText(qty[11] + "");
+		textField12.setText(qty[12] + "");
 	}
 	
 	public void remove(int i) {
@@ -505,5 +517,11 @@ public class Grafica_cucina {
 	
 	public void setLabel(String s) {
 		txtInfo.setText(s);
+	}
+
+	public void startModel(){
+		for(int i = 0; i < 10 ; i++){
+			model.add(i,"Tavolo " + i);
+		}
 	}
 }

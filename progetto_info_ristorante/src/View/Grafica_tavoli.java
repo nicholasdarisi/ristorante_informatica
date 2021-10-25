@@ -29,7 +29,7 @@ public class Grafica_tavoli {
 	private JScrollPane scrollPaneTavoli;
 	private JLabel lblSfondo;
 	private JTextField txtInfo;
-	private DefaultListModel<String> model;
+	private DefaultListModel<String> model = new DefaultListModel<String>();
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -87,7 +87,9 @@ public class Grafica_tavoli {
 		btnPaga.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		btnPaga.setBounds(959, 26, 130, 30);
 		frmTavoli.getContentPane().add(btnPaga);
-        
+
+		startModel();
+
         listTavoli = new JList<String>();
         listTavoli.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
         listTavoli.setModel(model);
@@ -99,7 +101,7 @@ public class Grafica_tavoli {
 		scrollPaneTavoli.getViewport().setOpaque(false);
 		
 		txtInfo = new JTextField();
-		txtInfo.setText("Scegli un piatto da pagare");
+		txtInfo.setText("Scegli un tavolo da pagare");
 		txtInfo.setHorizontalAlignment(SwingConstants.CENTER);
 		txtInfo.setForeground(Color.BLACK);
 		txtInfo.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
@@ -490,24 +492,39 @@ public class Grafica_tavoli {
 	public int getIndex() {
 		return listTavoli.getSelectedIndex();
 	}
-	
-	public void setList(ArrayList<?> a) {
-		listTavoli.removeAll();
-		for(int i=0; i<a.size(); i++) {
-			listTavoli.add((Component) a.get(i));
-		}
+
+	public void setList(int qty[]) {
+		textField.setText(qty[0] + "");
+		textField1.setText(qty[1] + "");
+		textField2.setText(qty[2] + "");
+		textField3.setText(qty[3] + "");
+		textField4.setText(qty[4] + "");
+		textField5.setText(qty[5] + "");
+		textField6.setText(qty[6] + "");
+		textField7.setText(qty[7] + "");
+		textField8.setText(qty[8] + "");
+		textField9.setText(qty[9] + "");
+		textField10.setText(qty[10] + "");
+		textField11.setText(qty[11] + "");
+		textField12.setText(qty[12] + "");
 	}
 	
 	public void remove(int i) {
 		listTavoli.remove(i);
 	}
 	
-	public void setImporto(float i) {
+	public void setImporto(String i) {
 		txtInfo.setText("Importo da pagare: " + i + "$");
 	}
 	
 	public void setLabel(String s) {
 		txtInfo.setText(s);
 	}
-	
+
+	public void startModel(){
+		for(int i = 0; i < 10 ; i++){
+			model.add(i,"Tavolo " + i);
+		}
+	}
+
 }

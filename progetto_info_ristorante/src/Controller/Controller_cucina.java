@@ -46,13 +46,8 @@ public class Controller_cucina implements ActionListener{
 			if (i >= 0){
 			check = cuc.CookOrder(i);
 			g.setLabel(check);
-			g.remove(i);
-			g_m.remove(i);
 			o = Save.loadOrdine();
-			g_t.setList(o.getOrdini());
 			}
-			g.setLabel("Seleziona qualcosa");
-			
 		}
 		
 		

@@ -22,6 +22,7 @@ public class Controller_ValueChanged_Cucina implements ListSelectionListener{
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
 		c.refreshOrder();
+		g.setList(o.getTavolo(g.getIndex()));
 		//g.setNumeri(o.getTavolo(g.getIndex()));
 		
 	}
