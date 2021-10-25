@@ -83,13 +83,14 @@ public class Grafica_tavoli {
 		txtTavoli.setBounds(12, 13, 116, 50);
 		frmTavoli.getContentPane().add(txtTavoli);
 		
-		btnPaga = new JButton("Consegna");
+		btnPaga = new JButton("Paga");
 		btnPaga.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		btnPaga.setBounds(959, 26, 130, 30);
 		frmTavoli.getContentPane().add(btnPaga);
         
         listTavoli = new JList<String>();
         listTavoli.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+        model = new DefaultListModel<>();
         listTavoli.setModel(model);
         listTavoli.setBounds(105, 640, 349, 113);
 		

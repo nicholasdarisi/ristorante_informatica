@@ -2,6 +2,7 @@ package View;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
@@ -392,6 +393,7 @@ public class Grafica_menu {
 		
 		listMenu = new JList<String>();
 		listMenu.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		model = new DefaultListModel<>();
 		listMenu.setModel(model);
 		listMenu.setBounds(105, 640, 349, 113);
 		
