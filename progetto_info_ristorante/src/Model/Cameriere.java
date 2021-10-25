@@ -16,6 +16,10 @@ public class Cameriere {
         this.nome = nome;
     }
 
+    public void setOrdini(Ordine ordine){
+        this.ordini = ordine;
+    }
+
     public void refreshOrder(){
         this.ordini = Save.loadOrdine();
     }
@@ -35,7 +39,7 @@ public class Cameriere {
         return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
     }
 
-    public Object getOrder() {
+    public Ordine getOrder() {
         return ordini;
     }
 

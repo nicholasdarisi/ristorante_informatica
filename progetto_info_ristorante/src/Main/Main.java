@@ -3,24 +3,26 @@ package Main;
 import java.io.Serializable;
 
 import Controller.Controller_paga;
-import Model.Amministrazione;
-import Model.Cameriere;
-import Model.Cucina;
-import Model.Ordine;
+import Model.*;
 import View.Grafica;
-import Model.Cassa;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		Amministrazione a;
-		Cameriere cam;
+		Cameriere cam = new Cameriere("Marin");
 		Cucina cuc;
 		Cassa cas;
-		Ordine o;
+		Ordine o = new Ordine();
 		Grafica g = new Grafica();
-		Controller_paga c = new Controller_paga(null, null, null, null, null, g);
-		c.inizio();
+		//Controller_paga c = new Controller_paga(null, null, null, null, null, g);
+		//c.inizio();
+		int b[] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+		cam.setOrdini(o);
+		cam.receiveOrder(b);
+		System.out.println(Menu.menu_price.get("Acqua"));
+
+
 	}
 
 }

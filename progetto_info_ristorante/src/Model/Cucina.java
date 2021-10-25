@@ -13,7 +13,7 @@ public class Cucina {
         this.nome = nome;
     }
 
-    public String receiveOrder( Ordine ordini){
+    public String setOrder( Ordine ordini){
         this.ordini = ordini;
 
         return " Ordine e stato ricevuto !!";
