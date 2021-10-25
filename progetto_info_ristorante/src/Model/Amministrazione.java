@@ -17,6 +17,10 @@ public class Amministrazione {
         return nome + " : ordine preso";
     }
 
+    public void refreshOrder(){
+        this.ordini = Save.loadOrdine();
+    }
+
     public String ChangeOrder(int ordinazioni[] ,int tavolo){
         int i = 0;
         for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
