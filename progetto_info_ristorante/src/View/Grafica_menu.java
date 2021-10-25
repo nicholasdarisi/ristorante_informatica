@@ -7,7 +7,6 @@ import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 
-import Controller.Controller_ValueChanged_Cucina;
 import Controller.Controller_ValueChanged_Menu;
 import Controller.Controller_menu;
 import javax.swing.JSpinner;
@@ -71,7 +70,7 @@ public class Grafica_menu {
 	
 	public Grafica_menu() {
 		frmMenu = new JFrame();
-		frmMenu.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica.class.getResource("/Img/icona.jpg")));
+		frmMenu.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica_menu.class.getResource("/Img/icona.jpg")));
 		frmMenu.setTitle("Men\u00F9");
 		frmMenu.setResizable(false);
 		frmMenu.setBounds(100, 100, 1200, 480);
@@ -418,7 +417,7 @@ public class Grafica_menu {
 		frmMenu.getContentPane().add(btnCancella);
 		
 		lblSfondo = new JLabel("");
-		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
+		lblSfondo.setIcon(new ImageIcon(Grafica_menu.class.getResource("/Img/menu.jpg")));
 		lblSfondo.setBounds(0, 0, 1194, 445);
 		frmMenu.getContentPane().add(lblSfondo);
 	}
