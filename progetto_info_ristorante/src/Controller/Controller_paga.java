@@ -10,18 +10,12 @@ import Model.Ordine;
 import View.Grafica_tavoli;
 
 public class Controller_paga implements ActionListener{
-	Cameriere cam;
-	Cucina cuc;
 	Cassa cas;
-	Ordine o;
 	Grafica_tavoli g;
 	String check;
 	
-	public Controller_paga( Cameriere cam, Cucina cuc, Cassa cas, Ordine o, Grafica_tavoli g) {
-		this.cam = cam;
-		this.cuc = cuc;
+	public Controller_paga( Cassa cas, Grafica_tavoli g) {
 		this.cas = cas;
-		this.o = o;
 		this.g = g;
 		g.registraController(this);
 	}
@@ -37,7 +31,7 @@ public class Controller_paga implements ActionListener{
 		if (e.getSource() == g.getButton(0)) {
 			int i = g.getIndex();
 			if (i >= 0){
-			g.setImporto(cas.calcolaImporto(i));
+			g.setLabel(cas.payOrder(g.getIndex()));
 			}
 		}
 		

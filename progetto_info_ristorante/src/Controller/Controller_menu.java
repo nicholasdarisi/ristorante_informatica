@@ -13,20 +13,12 @@ import View.Grafica_menu;
 
 public class Controller_menu implements ActionListener{
 	Cameriere cam;
-	Cucina cuc;
-	Cassa cas;
-	Ordine o;
 	Grafica_menu g;
-	Grafica_cucina g_c;
 	String check;
 	
-	public Controller_menu(Cameriere cam, Cucina cuc, Cassa cas, Ordine o, Grafica_menu g, Grafica_cucina g_c) {
+	public Controller_menu(Cameriere cam, Grafica_menu g) {
 		this.cam = cam;
-		this.cuc = cuc;
-		this.cas = cas;
-		this.o = o;
 		this.g = g;
-		this.g_c = g_c;
 		g.registraController(this);
 	}
 	
@@ -39,10 +31,9 @@ public class Controller_menu implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		//ordina
-		if (e.getSource() == g.getButton(0)) { 
+		if (e.getSource() == g.getButton(0)) {
 			check = cam.receiveOrder(g.getOrdine());
 			g.setLabel(check);
-			Save.saveOrdine(o);
 		}
 		
 		//reset
@@ -57,7 +48,6 @@ public class Controller_menu implements ActionListener{
 			if (i >=0){
 			check = cam.ChangeOrder(g.getOrdine(), i);
 			g.setLabel(check);
-			o = Save.loadOrdine();
 			}
 		}
 
@@ -66,7 +56,6 @@ public class Controller_menu implements ActionListener{
 			if (i >=0){
 				check = cam.DeleteOrder(i);
 				g.setLabel(check);
-				o = Save.loadOrdine();
 			}
 			g.reset();
 		}

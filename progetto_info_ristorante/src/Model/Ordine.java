@@ -27,7 +27,7 @@ public class Ordine extends Menu implements Serializable {
 
     public boolean isTavolo(int tavolo) {
         boolean bool = false;
-        if (ordini.contains(tavolo))
+        if (ordini.get(tavolo) != null)
             for (Map.Entry<String, Integer> ordine : ordini.get(tavolo).entrySet()) {
                 if (ordine.getValue() > 0) {
                     bool = true;

@@ -10,10 +10,9 @@ import View.Grafica_tavoli;
 public class Controller_ValueChanged_Paga implements ListSelectionListener{
 	
 	Cassa c;
-	Ordine o;
 	Grafica_tavoli g;
 
-	public Controller_ValueChanged_Paga(Cassa c, Ordine o, Grafica_tavoli g) {
+	public Controller_ValueChanged_Paga(Cassa c, Grafica_tavoli g) {
 		// TODO Auto-generated constructor stub
 		this.c = c;
 		this.g = g;
@@ -23,6 +22,8 @@ public class Controller_ValueChanged_Paga implements ListSelectionListener{
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
 		c.refreshOrder();
+		g.setList(c.getOrder().getTavolo(g.getIndex()));
+		g.setImporto(c.calcolaImporto(g.getIndex()));
 		//g.setNumeri(o.getTavolo(g.getIndex()));
 		
 	}

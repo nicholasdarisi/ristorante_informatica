@@ -2,9 +2,7 @@ package Main;
 
 import java.io.Serializable;
 
-import Controller.Controller_cucina;
-import Controller.Controller_menu;
-import Controller.Controller_paga;
+import Controller.*;
 import Model.*;
 import View.Grafica;
 import View.Grafica_cucina;
@@ -26,9 +24,12 @@ public class Main {
 		Grafica_cucina g_c = new Grafica_cucina();
 		Grafica_menu g_m = new Grafica_menu();
 		Grafica_tavoli g_t = new Grafica_tavoli();
-		Controller_paga c_p = new Controller_paga(cam, cuc, cas, o, g_t);
-		Controller_cucina c_c = new Controller_cucina(cam, cuc, cas, o, g_c, g_m, g_t);
-		Controller_menu c_m = new Controller_menu(cam, cuc, cas, o, g_m, g_c);
+		Controller_paga c_p = new Controller_paga(cas, g_t);
+		Controller_cucina c_c = new Controller_cucina(cuc,g_c);
+		Controller_menu c_m = new Controller_menu(cam,g_m);
+		Controller_ValueChanged_Menu controller_valueChanged_menu = new Controller_ValueChanged_Menu(cam,g_m);
+		Controller_ValueChanged_Cucina controller_valueChanged_cucina = new Controller_ValueChanged_Cucina(cuc,g_c);
+		Controller_ValueChanged_Paga controller_valueChanged_paga = new Controller_ValueChanged_Paga(cas,g_t);
 		c_p.inizio();
 		c_c.inizio();
 		c_m.inizio();

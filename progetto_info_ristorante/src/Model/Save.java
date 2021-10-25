@@ -18,17 +18,22 @@ public class Save{
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(ordine);
             oos.flush();
+            oos.close();
             fos.close();
         } catch (Exception e) {}
     }
 
     public static Ordine loadOrdine(){
+        Ordine ordine = null;
         try {
             FileInputStream fis = new FileInputStream(filePath);
             ObjectInputStream ois = new ObjectInputStream(fis);
+            ordine =  (Ordine)ois.readObject();
             fis.close();
-            return (Ordine)ois.readObject();
+            ois.close();
         } catch (Exception e) {}
-        return null;
+
+
+        return ordine;
     }
 }

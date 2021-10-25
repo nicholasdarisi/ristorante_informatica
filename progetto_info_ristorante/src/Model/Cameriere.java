@@ -25,6 +25,7 @@ public class Cameriere {
     }
 
     public String receiveOrder(int ordinazione[]) {
+        System.out.println(ordinazione[0]);
         if(!ordini.tavoliLeft()){
             return nome + " : non abbiamo altri tavoli !!!";
         }
@@ -38,6 +39,7 @@ public class Cameriere {
             ordine.setValue(ordinazione[i]);
             i++;
         }
+        System.out.println(ordini.isTavolo(0) + " : " + ordini.isTavolo(1) + " : " + ordini.isTavolo(2));
         Save.saveOrdine(ordini);
         return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
     }

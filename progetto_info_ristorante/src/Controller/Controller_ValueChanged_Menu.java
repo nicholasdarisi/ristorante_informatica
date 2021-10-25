@@ -10,12 +10,10 @@ import View.Grafica_menu;
 
 public class Controller_ValueChanged_Menu implements ListSelectionListener{
 	Cameriere c;
-	Ordine o;
 	Grafica_menu g;
 	
-	public Controller_ValueChanged_Menu(Cameriere c, Ordine o, Grafica_menu g) {
+	public Controller_ValueChanged_Menu(Cameriere c, Grafica_menu g) {
 		this.c = c;
-		this.o = o;
 		this.g = g;
 		g.registraValueChanged(this);
 	}
@@ -23,9 +21,8 @@ public class Controller_ValueChanged_Menu implements ListSelectionListener{
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("haha");
 		c.refreshOrder();
-		g.setSpinner(o.getTavolo(g.getIndex()));
+		g.setSpinner(c.getOrder().getTavolo(g.getIndex()));
 	}
 
 }

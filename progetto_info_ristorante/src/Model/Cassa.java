@@ -32,12 +32,15 @@ public class Cassa {
             ordine.setValue(0);
         }
         Save.saveOrdine(ordini);
-        return nome + " : tavolo " + tavolo + " eliminato con successo !!";
+        return nome + " : tavolo " + tavolo + " pagato con successo !!";
     }
 
     public void refreshOrder(){
         this.ordini = Save.loadOrdine();
     }
 
+    public Ordine getOrder(){
+        return ordini;
+    }
 
 }

@@ -29,7 +29,7 @@ public class Grafica_cucina {
 	private JScrollPane scrollPaneCucina;
 	private JLabel lblSfondo;
 	private JTextField txtInfo;
-	private DefaultListModel<String> model = new DefaultListModel<String>();
+	private DefaultListModel<String> model;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -64,6 +64,7 @@ public class Grafica_cucina {
 	private JTextField textField12;
 	
 	public Grafica_cucina() {
+		model = new DefaultListModel<String>();
 		frmCucina = new JFrame();
 		frmCucina.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica_cucina.class.getResource("/Img/icona.jpg")));
 		frmCucina.setTitle("Cucina");
@@ -92,14 +93,12 @@ public class Grafica_cucina {
 
         listCucina = new JList<String>();
         listCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-        model = new DefaultListModel<>();
         listCucina.setModel(model);
 		listCucina.setBounds(105, 640, 349, 113);
 		
 		scrollPaneCucina = new JScrollPane(listCucina);
 		scrollPaneCucina.setBounds(12, 76, 217, 543);
 		frmCucina.getContentPane().add(scrollPaneCucina);
-		scrollPaneCucina.setViewportView(listCucina);
         scrollPaneCucina.getViewport().setOpaque(false);
 		
 		txtInfo = new JTextField();
@@ -497,7 +496,7 @@ public class Grafica_cucina {
 	}
 	
 	public void setList(int qty[]) {
-		textField.setText(qty[0] + "");
+		textField0.setText(qty[0] + "");
 		textField1.setText(qty[1] + "");
 		textField2.setText(qty[2] + "");
 		textField3.setText(qty[3] + "");

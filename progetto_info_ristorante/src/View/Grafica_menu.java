@@ -445,85 +445,86 @@ public class Grafica_menu {
 	}
 
 	public void reset() {
-		spinner0.setValue(0);
-		spinner1.setValue(0);
-		spinner2.setValue(0);
-		spinner3.setValue(0);
-		spinner4.setValue(0);
-		spinner5.setValue(0);
-		spinner6.setValue(0);
-		spinner7.setValue(0);
-		spinner8.setValue(0);
-		spinner9.setValue(0);
-		spinner10.setValue(0);
-		spinner11.setValue(0);
-		spinner12.setValue(0);
+		spinner0.getModel().setValue(0);
+		spinner1.getModel().setValue(0);
+		spinner2.getModel().setValue(0);
+		spinner3.getModel().setValue(0);
+		spinner4.getModel().setValue(0);
+		spinner5.getModel().setValue(0);
+		spinner6.getModel().setValue(0);
+		spinner7.getModel().setValue(0);
+		spinner8.getModel().setValue(0);
+		spinner9.getModel().setValue(0);
+		spinner10.getModel().setValue(0);
+		spinner11.getModel().setValue(0);
+		spinner12.getModel().setValue(0);
+
 	}
 	
 	public int[] getOrdine() {
 		int[] piatti = new int[13];
 		try {
-			piatti[0] = Integer.parseInt((String) spinner0.getValue());
+			piatti[0] = Integer.parseInt(spinner0.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[0] = 0;
 		}
 		try {
-			piatti[1] = Integer.parseInt((String) spinner1.getValue());
+			piatti[1] = Integer.parseInt(spinner1.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[1] = 0;
 		}
 		try {
-			piatti[2] = Integer.parseInt((String) spinner2.getValue());
+			piatti[2] = Integer.parseInt(spinner2.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[2] = 0;
 		}
 		try {
-			piatti[3] = Integer.parseInt((String) spinner3.getValue());
+			piatti[3] = Integer.parseInt(spinner3.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[3] = 0;
 		}
 		try {
-			piatti[4] = Integer.parseInt((String) spinner4.getValue());
+			piatti[4] = Integer.parseInt(spinner4.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[4] = 0;
 		}
 		try {
-			piatti[5] = Integer.parseInt((String) spinner5.getValue());
+			piatti[5] = Integer.parseInt(spinner5.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[5] = 0;
 		}
 		try {
-			piatti[6] = Integer.parseInt((String) spinner6.getValue());
+			piatti[6] = Integer.parseInt(spinner6.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[6] = 0;
 		}
 		try {
-			piatti[7] = Integer.parseInt((String) spinner7.getValue());
+			piatti[7] = Integer.parseInt(spinner7.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[7] = 0;
 		}
 		try {
-			piatti[8] = Integer.parseInt((String) spinner8.getValue());
+			piatti[8] = Integer.parseInt(spinner8.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[8] = 0;
 		}
 		try {
-			piatti[9] = Integer.parseInt((String) spinner9.getValue());
+			piatti[9] = Integer.parseInt(spinner9.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[9] = 0;
 		}
 		try {
-			piatti[10] = Integer.parseInt((String) spinner10.getValue());
+			piatti[10] = Integer.parseInt(spinner10.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[10] = 0;
 		}
 		try {
-			piatti[11] = Integer.parseInt((String) spinner11.getValue());
+			piatti[11] = Integer.parseInt(spinner11.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[11] = 0;
 		}
 		try {
-			piatti[12] = Integer.parseInt((String) spinner12.getValue());
+			piatti[12] = Integer.parseInt(spinner12.getModel().getValue().toString());
 		} catch (Exception e) {
 			piatti[12] = 0;
 		}
@@ -545,19 +546,19 @@ public class Grafica_menu {
 	}
 	
 	public void setSpinner(int[] a) {
-		spinner0.setValue(a[0]);
-		spinner1.setValue(a[1]);
-		spinner2.setValue(a[2]);
-		spinner3.setValue(a[3]);
-		spinner4.setValue(a[4]);
-		spinner5.setValue(a[5]);
-		spinner6.setValue(a[6]);
-		spinner7.setValue(a[7]);
-		spinner8.setValue(a[8]);
-		spinner9.setValue(a[9]);
-		spinner10.setValue(a[10]);
-		spinner11.setValue(a[11]);
-		spinner12.setValue(a[12]);
+		spinner0.getModel().setValue(a[0]);
+		spinner1.getModel().setValue(a[1]);
+		spinner2.getModel().setValue(a[2]);
+		spinner3.getModel().setValue(a[3]);
+		spinner4.getModel().setValue(a[4]);
+		spinner5.getModel().setValue(a[5]);
+		spinner6.getModel().setValue(a[6]);
+		spinner7.getModel().setValue(a[7]);
+		spinner8.getModel().setValue(a[8]);
+		spinner9.getModel().setValue(a[9]);
+		spinner10.getModel().setValue(a[10]);
+		spinner11.getModel().setValue(a[11]);
+		spinner12.getModel().setValue(a[12]);
 	}
 
 	public void startModel(){

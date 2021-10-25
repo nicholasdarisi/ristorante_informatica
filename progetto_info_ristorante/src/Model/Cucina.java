@@ -29,15 +29,16 @@ public class Cucina {
         ordini.ordini.get(tavolo).forEach(
                 (String key, Integer value) -> {
                     if(value > 0){
-                        result[0] += value + (value > 1 ? "Piatti " : " Piatto") + " di " + key + " sono stati preparati !!";
+                        result[0] += value + (value > 1 ? " Piatti " : " Piatto") + " di " + key + " sono stati preparati !!";
                     }
                     ordini.ordini.get(tavolo).replace(key ,0);
                 }
         );
-        Save.saveOrdine(ordini);
         return result[0];
     }
 
-
+    public Ordine getOrder(){
+        return ordini;
+    }
 
 }

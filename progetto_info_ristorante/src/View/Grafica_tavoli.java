@@ -29,7 +29,6 @@ public class Grafica_tavoli {
 	private JScrollPane scrollPaneTavoli;
 	private JLabel lblSfondo;
 	private JTextField txtInfo;
-	private DefaultListModel<String> model = new DefaultListModel<String>();
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -62,8 +61,11 @@ public class Grafica_tavoli {
 	private JTextField textField10;
 	private JTextField textField11;
 	private JTextField textField12;
-	
+	private DefaultListModel<String> model ;
+
+
 	public Grafica_tavoli() {
+		model = new DefaultListModel<String>();
 		frmTavoli = new JFrame();
 		frmTavoli.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica_tavoli.class.getResource("/Img/icona.jpg")));
 		frmTavoli.setTitle("Cassa");
@@ -92,7 +94,6 @@ public class Grafica_tavoli {
 
         listTavoli = new JList<String>();
         listTavoli.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-        model = new DefaultListModel<>();
         listTavoli.setModel(model);
         listTavoli.setBounds(105, 640, 349, 113);
 		
@@ -495,7 +496,7 @@ public class Grafica_tavoli {
 	}
 
 	public void setList(int qty[]) {
-		textField.setText(qty[0] + "");
+		textField0.setText(qty[0] + "");
 		textField1.setText(qty[1] + "");
 		textField2.setText(qty[2] + "");
 		textField3.setText(qty[3] + "");
