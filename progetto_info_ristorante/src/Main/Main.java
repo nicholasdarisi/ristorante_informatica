@@ -2,66 +2,32 @@ package Main;
 
 import java.io.Serializable;
 
+import Controller.Controller_cucina;
+import Controller.Controller_menu;
 import Controller.Controller_paga;
 import Model.*;
 import View.Grafica;
+import View.Grafica_cucina;
+import View.Grafica_menu;
+import View.Grafica_tavoli;
 
 public class Main {
 	
 	public static void main(String[] args) {
-		Amministrazione a;
-		Cameriere cam = new Cameriere("Marin");
-		Cucina cuc;
-		Cassa cas;
+		Cameriere cam = new Cameriere("Cameriere");
+		Cucina cuc = new Cucina("Cucina");
+		Cassa cas = new Cassa("Cassa");
 		Ordine o = new Ordine();
-		Grafica g = new Grafica();
-		//Controller_paga c = new Controller_paga(null, null, null, null, null, g);
-		//c.inizio();
-		int b[] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-		cam.setOrdini(o);
-		cam.receiveOrder(b);
-		System.out.println(Menu.menu_price.get("Acqua"));
-
+		Grafica_cucina g_c = new Grafica_cucina();
+		Grafica_menu g_m = new Grafica_menu();
+		Grafica_tavoli g_t = new Grafica_tavoli();
+		Controller_paga c_p = new Controller_paga(cam, cuc, cas, o, g_t);
+		Controller_cucina c_c = new Controller_cucina(cam, cuc, cas, o, g_c, g_m, g_t);
+		Controller_menu c_m = new Controller_menu(cam, cuc, cas, o, g_m, g_c);
+		c_p.inizio();
+		c_c.inizio();
+		c_m.inizio();
 
 	}
 
 }
-
-/*MAIN
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-
-public class Main {
-
-	public static void main(String[] args) {
-		
-		//Scrittura di oggetti
-
-
-}
-*/
-
-/*OGGETTO
-import java.io.Serializable;
-
-public class Persona implements Serializable{
-
-	private static final long serialVersionUID = 1L;
-	private String nome;
-	private String cognome;
-	
-	public Persona(String nome, String cognome) {
-		this.nome = nome;
-		this.cognome = cognome;
-	}
-	
-	@Override
-	public String toString() {
-		return nome + " " + cognome;
-	}
-	
-}
-
- */
