@@ -62,6 +62,19 @@ public class Grafica_cucina {
 	private JTextField textField10;
 	private JTextField textField11;
 	private JTextField textField12;
+	private JTextField textField__0;
+	private JTextField textField__3;
+	private JTextField textField__4;
+	private JTextField textField__8;
+	private JTextField textField__9;
+	private JTextField textField__10;
+	private JTextField textField__12;
+	private JTextField textField__11;
+	private JTextField textField__7;
+	private JTextField textField__6;
+	private JTextField textField__5;
+	private JTextField textField__2;
+	private JTextField textField__1;
 	
 	public Grafica_cucina() {
 		model = new DefaultListModel<String>();
@@ -69,7 +82,7 @@ public class Grafica_cucina {
 		frmCucina.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica_cucina.class.getResource("/Img/icona.jpg")));
 		frmCucina.setTitle("Cucina");
 		frmCucina.setResizable(false);
-		frmCucina.setBounds(100, 100, 1150, 670);
+		frmCucina.setBounds(100, 100, 1250, 670);
 		frmCucina.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCucina.getContentPane().setLayout(null);
 		
@@ -142,7 +155,7 @@ public class Grafica_cucina {
 		textField_17.setEditable(false);
 		textField_17.setColumns(10);
 		textField_17.setBackground(Color.WHITE);
-		textField_17.setBounds(747, 503, 100, 30);
+		textField_17.setBounds(797, 503, 100, 30);
 		frmCucina.getContentPane().add(textField_17);
 		
 		textField_14 = new JTextField();
@@ -164,7 +177,7 @@ public class Grafica_cucina {
 		textField_3.setEditable(false);
 		textField_3.setColumns(10);
 		textField_3.setBackground(Color.WHITE);
-		textField_3.setBounds(747, 250, 200, 40);
+		textField_3.setBounds(797, 250, 200, 40);
 		frmCucina.getContentPane().add(textField_3);
 		
 		textField_5 = new JTextField();
@@ -175,7 +188,7 @@ public class Grafica_cucina {
 		textField_5.setEditable(false);
 		textField_5.setColumns(10);
 		textField_5.setBackground(Color.WHITE);
-		textField_5.setBounds(747, 450, 200, 40);
+		textField_5.setBounds(797, 450, 200, 40);
 		frmCucina.getContentPane().add(textField_5);
 		
 		textField_8 = new JTextField();
@@ -186,7 +199,7 @@ public class Grafica_cucina {
 		textField_8.setEditable(false);
 		textField_8.setColumns(10);
 		textField_8.setBackground(Color.WHITE);
-		textField_8.setBounds(747, 172, 280, 30);
+		textField_8.setBounds(797, 172, 280, 30);
 		frmCucina.getContentPane().add(textField_8);
 		
 		textField_9 = new JTextField();
@@ -230,7 +243,7 @@ public class Grafica_cucina {
 		textField_18.setEditable(false);
 		textField_18.setColumns(10);
 		textField_18.setBackground(Color.WHITE);
-		textField_18.setBounds(747, 546, 100, 30);
+		textField_18.setBounds(797, 546, 100, 30);
 		frmCucina.getContentPane().add(textField_18);
 		
 		textField_11 = new JTextField();
@@ -241,7 +254,7 @@ public class Grafica_cucina {
 		textField_11.setEditable(false);
 		textField_11.setColumns(10);
 		textField_11.setBackground(Color.WHITE);
-		textField_11.setBounds(747, 303, 160, 30);
+		textField_11.setBounds(797, 303, 160, 30);
 		frmCucina.getContentPane().add(textField_11);
 		
 		textField_2 = new JTextField();
@@ -263,7 +276,7 @@ public class Grafica_cucina {
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBackground(Color.WHITE);
-		textField_1.setBounds(747, 76, 200, 40);
+		textField_1.setBounds(797, 76, 200, 40);
 		frmCucina.getContentPane().add(textField_1);
 		
 		textField_13 = new JTextField();
@@ -274,7 +287,7 @@ public class Grafica_cucina {
 		textField_13.setEditable(false);
 		textField_13.setColumns(10);
 		textField_13.setBackground(Color.WHITE);
-		textField_13.setBounds(747, 383, 150, 30);
+		textField_13.setBounds(797, 383, 150, 30);
 		frmCucina.getContentPane().add(textField_13);
 		
 		textField_6 = new JTextField();
@@ -296,7 +309,7 @@ public class Grafica_cucina {
 		textField_12.setEditable(false);
 		textField_12.setColumns(10);
 		textField_12.setBackground(Color.WHITE);
-		textField_12.setBounds(747, 346, 190, 30);
+		textField_12.setBounds(797, 346, 190, 30);
 		frmCucina.getContentPane().add(textField_12);
 		
 		textField_16 = new JTextField();
@@ -318,7 +331,7 @@ public class Grafica_cucina {
 		textField_7.setEditable(false);
 		textField_7.setColumns(10);
 		textField_7.setBackground(Color.WHITE);
-		textField_7.setBounds(747, 129, 190, 30);
+		textField_7.setBounds(797, 129, 190, 30);
 		frmCucina.getContentPane().add(textField_7);
 		
 		textField0 = new JTextField();
@@ -340,7 +353,7 @@ public class Grafica_cucina {
 		textField1.setEditable(false);
 		textField1.setColumns(10);
 		textField1.setBackground(Color.WHITE);
-		textField1.setBounds(949, 129, 50, 30);
+		textField1.setBounds(999, 129, 50, 30);
 		frmCucina.getContentPane().add(textField1);
 		
 		textField2 = new JTextField();
@@ -351,7 +364,7 @@ public class Grafica_cucina {
 		textField2.setEditable(false);
 		textField2.setColumns(10);
 		textField2.setBackground(Color.WHITE);
-		textField2.setBounds(1039, 172, 50, 30);
+		textField2.setBounds(1089, 172, 50, 30);
 		frmCucina.getContentPane().add(textField2);
 		
 		textField3 = new JTextField();
@@ -384,7 +397,7 @@ public class Grafica_cucina {
 		textField5.setEditable(false);
 		textField5.setColumns(10);
 		textField5.setBackground(Color.WHITE);
-		textField5.setBounds(919, 303, 50, 30);
+		textField5.setBounds(969, 303, 50, 30);
 		frmCucina.getContentPane().add(textField5);
 		
 		textField6 = new JTextField();
@@ -395,7 +408,7 @@ public class Grafica_cucina {
 		textField6.setEditable(false);
 		textField6.setColumns(10);
 		textField6.setBackground(Color.WHITE);
-		textField6.setBounds(949, 346, 50, 30);
+		textField6.setBounds(999, 346, 50, 30);
 		frmCucina.getContentPane().add(textField6);
 		
 		textField7 = new JTextField();
@@ -406,7 +419,7 @@ public class Grafica_cucina {
 		textField7.setEditable(false);
 		textField7.setColumns(10);
 		textField7.setBackground(Color.WHITE);
-		textField7.setBounds(909, 383, 50, 30);
+		textField7.setBounds(959, 383, 50, 30);
 		frmCucina.getContentPane().add(textField7);
 		
 		textField8 = new JTextField();
@@ -450,7 +463,7 @@ public class Grafica_cucina {
 		textField11.setEditable(false);
 		textField11.setColumns(10);
 		textField11.setBackground(Color.WHITE);
-		textField11.setBounds(859, 503, 50, 30);
+		textField11.setBounds(909, 503, 50, 30);
 		frmCucina.getContentPane().add(textField11);
 		
 		textField12 = new JTextField();
@@ -461,12 +474,155 @@ public class Grafica_cucina {
 		textField12.setEditable(false);
 		textField12.setColumns(10);
 		textField12.setBackground(Color.WHITE);
-		textField12.setBounds(859, 546, 50, 30);
+		textField12.setBounds(909, 546, 50, 30);
 		frmCucina.getContentPane().add(textField12);
+		
+		textField__0 = new JTextField();
+		textField__0.setText("0");
+		textField__0.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__0.setForeground(Color.BLACK);
+		textField__0.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__0.setEditable(false);
+		textField__0.setColumns(10);
+		textField__0.setBackground(Color.WHITE);
+		textField__0.setBounds(705, 129, 50, 30);
+		frmCucina.getContentPane().add(textField__0);
+		
+		textField__3 = new JTextField();
+		textField__3.setText("0");
+		textField__3.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__3.setForeground(Color.BLACK);
+		textField__3.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__3.setEditable(false);
+		textField__3.setColumns(10);
+		textField__3.setBackground(Color.WHITE);
+		textField__3.setBounds(505, 303, 50, 30);
+		frmCucina.getContentPane().add(textField__3);
+		
+		textField__4 = new JTextField();
+		textField__4.setText("0");
+		textField__4.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__4.setForeground(Color.BLACK);
+		textField__4.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__4.setEditable(false);
+		textField__4.setColumns(10);
+		textField__4.setBackground(Color.WHITE);
+		textField__4.setBounds(545, 346, 50, 30);
+		frmCucina.getContentPane().add(textField__4);
+		
+		textField__8 = new JTextField();
+		textField__8.setText("0");
+		textField__8.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__8.setForeground(Color.BLACK);
+		textField__8.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__8.setEditable(false);
+		textField__8.setColumns(10);
+		textField__8.setBackground(Color.WHITE);
+		textField__8.setBounds(415, 503, 50, 30);
+		frmCucina.getContentPane().add(textField__8);
+		
+		textField__9 = new JTextField();
+		textField__9.setText("0");
+		textField__9.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__9.setForeground(Color.BLACK);
+		textField__9.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__9.setEditable(false);
+		textField__9.setColumns(10);
+		textField__9.setBackground(Color.WHITE);
+		textField__9.setBounds(443, 546, 50, 30);
+		frmCucina.getContentPane().add(textField__9);
+		
+		textField__10 = new JTextField();
+		textField__10.setText("0");
+		textField__10.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__10.setForeground(Color.BLACK);
+		textField__10.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__10.setEditable(false);
+		textField__10.setColumns(10);
+		textField__10.setBackground(Color.WHITE);
+		textField__10.setBounds(443, 589, 50, 30);
+		frmCucina.getContentPane().add(textField__10);
+		
+		textField__12 = new JTextField();
+		textField__12.setText("0");
+		textField__12.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__12.setForeground(Color.BLACK);
+		textField__12.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__12.setEditable(false);
+		textField__12.setColumns(10);
+		textField__12.setBackground(Color.WHITE);
+		textField__12.setBounds(969, 546, 50, 30);
+		frmCucina.getContentPane().add(textField__12);
+		
+		textField__11 = new JTextField();
+		textField__11.setText("0");
+		textField__11.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__11.setForeground(Color.BLACK);
+		textField__11.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__11.setEditable(false);
+		textField__11.setColumns(10);
+		textField__11.setBackground(Color.WHITE);
+		textField__11.setBounds(969, 503, 50, 30);
+		frmCucina.getContentPane().add(textField__11);
+		
+		textField__7 = new JTextField();
+		textField__7.setText("0");
+		textField__7.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__7.setForeground(Color.BLACK);
+		textField__7.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__7.setEditable(false);
+		textField__7.setColumns(10);
+		textField__7.setBackground(Color.WHITE);
+		textField__7.setBounds(1021, 383, 50, 30);
+		frmCucina.getContentPane().add(textField__7);
+		
+		textField__6 = new JTextField();
+		textField__6.setText("0");
+		textField__6.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__6.setForeground(Color.BLACK);
+		textField__6.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__6.setEditable(false);
+		textField__6.setColumns(10);
+		textField__6.setBackground(Color.WHITE);
+		textField__6.setBounds(1061, 346, 50, 30);
+		frmCucina.getContentPane().add(textField__6);
+		
+		textField__5 = new JTextField();
+		textField__5.setText("0");
+		textField__5.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__5.setForeground(Color.BLACK);
+		textField__5.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__5.setEditable(false);
+		textField__5.setColumns(10);
+		textField__5.setBackground(Color.WHITE);
+		textField__5.setBounds(1031, 303, 50, 30);
+		frmCucina.getContentPane().add(textField__5);
+		
+		textField__2 = new JTextField();
+		textField__2.setText("0");
+		textField__2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__2.setForeground(Color.BLACK);
+		textField__2.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__2.setEditable(false);
+		textField__2.setColumns(10);
+		textField__2.setBackground(Color.WHITE);
+		textField__2.setBounds(1151, 172, 50, 30);
+		frmCucina.getContentPane().add(textField__2);
+		
+		textField__1 = new JTextField();
+		textField__1.setText("0");
+		textField__1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField__1.setForeground(Color.BLACK);
+		textField__1.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		textField__1.setEditable(false);
+		textField__1.setColumns(10);
+		textField__1.setBackground(Color.WHITE);
+		textField__1.setBounds(1061, 129, 50, 30);
+		frmCucina.getContentPane().add(textField__1);
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica_cucina.class.getResource("/Img/cucina.jpg")));
-		lblSfondo.setBounds(0, 0, 1144, 635);
+		lblSfondo.setBounds(0, 0, 1244, 635);
 		frmCucina.getContentPane().add(lblSfondo);
 	}
 
@@ -509,6 +665,22 @@ public class Grafica_cucina {
 		textField10.setText(qty[10] + "");
 		textField11.setText(qty[11] + "");
 		textField12.setText(qty[12] + "");
+	}
+	
+	public void setQty(int qty[]) {
+		textField__0.setText(qty[0] + "");
+		textField__1.setText(qty[1] + "");
+		textField__2.setText(qty[2] + "");
+		textField__3.setText(qty[3] + "");
+		textField__4.setText(qty[4] + "");
+		textField__5.setText(qty[5] + "");
+		textField__6.setText(qty[6] + "");
+		textField__7.setText(qty[7] + "");
+		textField__8.setText(qty[8] + "");
+		textField__9.setText(qty[9] + "");
+		textField__10.setText(qty[10] + "");
+		textField__11.setText(qty[11] + "");
+		textField__12.setText(qty[12] + "");
 	}
 
 	public void setLabel(String s) {
