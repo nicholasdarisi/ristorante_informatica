@@ -3,12 +3,10 @@ package Controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Model.Amministrazione;
 import Model.Cameriere;
 import Model.Cassa;
 import Model.Cucina;
 import Model.Ordine;
-import View.Grafica;
 import View.Grafica_tavoli;
 
 public class Controller_paga implements ActionListener{
