@@ -5,6 +5,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import Controller.Controller_ValueChanged_Menu;
+import Controller.Controller_ValueChanged_Paga;
 import Controller.Controller_paga;
 
 import java.awt.Font;
@@ -89,6 +91,10 @@ public class Grafica_tavoli {
 		btnPaga.addActionListener(controller);
 	}
 	
+	public void registraValueChanged(Controller_ValueChanged_Paga c) {
+		listTavoli.addListSelectionListener(c);
+	}
+	
 	public JButton getButton(int type) {
         switch (type) {
             case 0:
@@ -114,6 +120,10 @@ public class Grafica_tavoli {
 	
 	public void setImporto(float i) {
 		txtPagamento.setText("Importo da pagare: " + i + "$");
+	}
+	
+	public void setLabel(String s) {
+		txtPagamento.setText(s);
 	}
 	
 }

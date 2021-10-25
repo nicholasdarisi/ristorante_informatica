@@ -7,6 +7,8 @@ import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 
+import Controller.Controller_ValueChanged_Cucina;
+import Controller.Controller_ValueChanged_Menu;
 import Controller.Controller_menu;
 import javax.swing.JSpinner;
 import java.awt.Font;
@@ -65,13 +67,14 @@ public class Grafica_menu {
 	private JScrollPane scrollPaneMenu;
 	private JTextField txtInfo;
 	private ListModel<String> model;
+	private JButton btnCancella;
 	
 	public Grafica_menu() {
 		frmMenu = new JFrame();
 		frmMenu.setIconImage(Toolkit.getDefaultToolkit().getImage(Grafica.class.getResource("/Img/icona.jpg")));
 		frmMenu.setTitle("Men\u00F9");
 		frmMenu.setResizable(false);
-		frmMenu.setBounds(100, 100, 1200, 642);
+		frmMenu.setBounds(100, 100, 1200, 480);
 		frmMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMenu.getContentPane().setLayout(null);
 		
@@ -144,7 +147,7 @@ public class Grafica_menu {
 		txtBevande.setHorizontalAlignment(SwingConstants.CENTER);
 		txtBevande.setEditable(false);
 		txtBevande.setColumns(10);
-		txtBevande.setBounds(502, 254, 200, 40);
+		txtBevande.setBounds(302, 254, 200, 40);
 		frmMenu.getContentPane().add(txtBevande);
 		
 		txtDolci = new JTextField();
@@ -155,7 +158,7 @@ public class Grafica_menu {
 		txtDolci.setHorizontalAlignment(SwingConstants.CENTER);
 		txtDolci.setEditable(false);
 		txtDolci.setColumns(10);
-		txtDolci.setBounds(869, 254, 200, 40);
+		txtDolci.setBounds(539, 254, 200, 40);
 		frmMenu.getContentPane().add(txtDolci);
 		
 		txtBattilarda = new JTextField();
@@ -296,7 +299,7 @@ public class Grafica_menu {
 		txtAcqua.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		txtAcqua.setEditable(false);
 		txtAcqua.setColumns(10);
-		txtAcqua.setBounds(502, 307, 100, 30);
+		txtAcqua.setBounds(302, 307, 100, 30);
 		frmMenu.getContentPane().add(txtAcqua);
 		
 		txtPepsi = new JTextField();
@@ -307,7 +310,7 @@ public class Grafica_menu {
 		txtPepsi.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		txtPepsi.setEditable(false);
 		txtPepsi.setColumns(10);
-		txtPepsi.setBounds(502, 350, 130, 30);
+		txtPepsi.setBounds(302, 350, 130, 30);
 		frmMenu.getContentPane().add(txtPepsi);
 		
 		txtVino = new JTextField();
@@ -318,25 +321,25 @@ public class Grafica_menu {
 		txtVino.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		txtVino.setEditable(false);
 		txtVino.setColumns(10);
-		txtVino.setBounds(502, 393, 130, 30);
+		txtVino.setBounds(302, 393, 130, 30);
 		frmMenu.getContentPane().add(txtVino);
 		
 		spinner8 = new JSpinner();
 		spinner8.setModel(new SpinnerNumberModel(0, 0, 999, 1));
 		spinner8.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		spinner8.setBounds(602, 307, 50, 30);
+		spinner8.setBounds(402, 307, 50, 30);
 		frmMenu.getContentPane().add(spinner8);
 		
 		spinner9 = new JSpinner();
 		spinner9.setModel(new SpinnerNumberModel(0, 0, 999, 1));
 		spinner9.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		spinner9.setBounds(632, 350, 50, 30);
+		spinner9.setBounds(432, 350, 50, 30);
 		frmMenu.getContentPane().add(spinner9);
 		
 		spinner10 = new JSpinner();
 		spinner10.setModel(new SpinnerNumberModel(0, 0, 999, 1));
 		spinner10.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		spinner10.setBounds(632, 393, 50, 30);
+		spinner10.setBounds(432, 393, 50, 30);
 		frmMenu.getContentPane().add(spinner10);
 		
 		txtCaffe = new JTextField();
@@ -347,7 +350,7 @@ public class Grafica_menu {
 		txtCaffe.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		txtCaffe.setEditable(false);
 		txtCaffe.setColumns(10);
-		txtCaffe.setBounds(869, 307, 100, 30);
+		txtCaffe.setBounds(539, 307, 100, 30);
 		frmMenu.getContentPane().add(txtCaffe);
 		
 		txtTiramisu = new JTextField();
@@ -358,42 +361,43 @@ public class Grafica_menu {
 		txtTiramisu.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		txtTiramisu.setEditable(false);
 		txtTiramisu.setColumns(10);
-		txtTiramisu.setBounds(869, 350, 100, 30);
+		txtTiramisu.setBounds(539, 350, 100, 30);
 		frmMenu.getContentPane().add(txtTiramisu);
 		
 		spinner11 = new JSpinner();
 		spinner11.setModel(new SpinnerNumberModel(0, 0, 999, 1));
 		spinner11.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		spinner11.setBounds(969, 307, 50, 30);
+		spinner11.setBounds(639, 307, 50, 30);
 		frmMenu.getContentPane().add(spinner11);
 		
 		spinner12 = new JSpinner();
 		spinner12.setModel(new SpinnerNumberModel(0, 0, 999, 1));
 		spinner12.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		spinner12.setBounds(969, 350, 50, 30);
+		spinner12.setBounds(639, 350, 50, 30);
 		frmMenu.getContentPane().add(spinner12);
 		
 		btnOrdina = new JButton("Ordina");
 		btnOrdina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		btnOrdina.setBounds(25, 473, 130, 30);
+		btnOrdina.setBounds(1019, 254, 130, 30);
 		frmMenu.getContentPane().add(btnOrdina);
 		
 		btnResetta = new JButton("Resetta");
 		btnResetta.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		btnResetta.setBounds(25, 516, 130, 30);
+		btnResetta.setBounds(1019, 393, 130, 30);
 		frmMenu.getContentPane().add(btnResetta);
 		
 		btnModifica = new JButton("Modifica");
 		btnModifica.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		btnModifica.setBounds(25, 559, 130, 30);
+		btnModifica.setBounds(1019, 297, 130, 30);
 		frmMenu.getContentPane().add(btnModifica);
 		
 		listMenu = new JList<String>();
+		listMenu.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
 		listMenu.setModel(model);
 		listMenu.setBounds(105, 640, 349, 113);
 		
 		scrollPaneMenu = new JScrollPane(listMenu);
-		scrollPaneMenu.setBounds(185, 473, 964, 116);
+		scrollPaneMenu.setBounds(782, 254, 215, 169);
 		frmMenu.getContentPane().add(scrollPaneMenu);
         scrollPaneMenu.getViewport().setOpaque(false);
 		
@@ -408,9 +412,14 @@ public class Grafica_menu {
 		txtInfo.setBounds(157, 25, 992, 30);
 		frmMenu.getContentPane().add(txtInfo);
 		
+		btnCancella = new JButton("Cancella");
+		btnCancella.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		btnCancella.setBounds(1019, 340, 130, 30);
+		frmMenu.getContentPane().add(btnCancella);
+		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
-		lblSfondo.setBounds(0, 0, 1194, 607);
+		lblSfondo.setBounds(0, 0, 1194, 445);
 		frmMenu.getContentPane().add(lblSfondo);
 	}
 
@@ -422,6 +431,7 @@ public class Grafica_menu {
 		btnOrdina.addActionListener(controller);
 		btnResetta.addActionListener(controller);
 		btnModifica.addActionListener(controller);
+		btnCancella.addActionListener(controller);
 	}
 	
 	public JButton getButton(int type) {
@@ -432,9 +442,15 @@ public class Grafica_menu {
                 return btnResetta;
             case 2:
                 return btnModifica;
+            case 3:
+                return btnCancella;
         }
         return null;
     }
+	
+	public void registraValueChanged(Controller_ValueChanged_Menu c) {
+		listMenu.addListSelectionListener(c);
+	}
 
 	public void reset() {
 		spinner0.setValue(0);
@@ -562,5 +578,4 @@ public class Grafica_menu {
 		spinner11.setValue(a[11]);
 		spinner12.setValue(a[12]);
 	}
-	
 }
