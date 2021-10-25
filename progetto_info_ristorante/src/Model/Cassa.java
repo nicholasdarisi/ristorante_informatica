@@ -23,6 +23,9 @@ public class Cassa {
         }
         return result;
     }
+    public void refreshOrder(){
+        this.ordini = Save.loadOrdine();
+    }
 
 
 }

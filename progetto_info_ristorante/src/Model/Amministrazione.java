@@ -13,7 +13,6 @@ public class Amministrazione {
 
     public String getOrder(Ordine ordine){
         ordini = ordine;
-
         return nome + " : ordine preso";
     }
 

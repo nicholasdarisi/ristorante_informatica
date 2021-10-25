@@ -39,6 +39,26 @@ public class Cameriere {
         return nome + " : Tutti i piatti della tavola " + numTav + " sono stati inseriti !!!";
     }
 
+    public String ChangeOrder(int ordinazioni[] ,int tavolo){
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+            ordine.setValue(ordinazioni[i++]);
+        }
+        Save.saveOrdine(ordini);
+        return nome + " : tavolo " + tavolo + "" + " modificato con successo !!";
+    }
+
+    public String DeleteOrder(int tavolo){
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet() ){
+            ordine.setValue(0);
+        }
+        Save.saveOrdine(ordini);
+        return nome + " : tavolo " + tavolo + " eliminato con successo !!";
+    }
+
+
+
     public Ordine getOrder() {
         return ordini;
     }

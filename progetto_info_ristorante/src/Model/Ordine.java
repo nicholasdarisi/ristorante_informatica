@@ -8,4 +8,14 @@ public class Ordine extends Menu implements Serializable{
     public ArrayList<Map<String, Integer>> getOrdini(){
         return ordini;
     }
+
+    public int[] getTavolo(int tavolo){
+        int result[] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+        int i = 0;
+        for(Map.Entry<String, Integer> ordine : ordini.get(tavolo).entrySet() ){
+            result[i] = ordine.getValue();
+            i++;
+        }
+        return result;
+    }
 }
