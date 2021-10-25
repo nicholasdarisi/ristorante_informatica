@@ -63,7 +63,7 @@ public class Grafica_menu {
 	private JButton btnModifica;
 	private JList<String> listMenu;
 	private JScrollPane scrollPaneMenu;
-	private JTextField txtInformazioni;
+	private JTextField txtInfo;
 	private ListModel<String> model;
 	
 	public Grafica_menu() {
@@ -397,16 +397,16 @@ public class Grafica_menu {
 		frmMenu.getContentPane().add(scrollPaneMenu);
         scrollPaneMenu.getViewport().setOpaque(false);
 		
-		txtInformazioni = new JTextField();
-		txtInformazioni.setText("Benvenuti al ristorante da Ruiza");
-		txtInformazioni.setHorizontalAlignment(SwingConstants.CENTER);
-		txtInformazioni.setForeground(Color.BLACK);
-		txtInformazioni.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		txtInformazioni.setEditable(false);
-		txtInformazioni.setColumns(10);
-		txtInformazioni.setBackground(Color.WHITE);
-		txtInformazioni.setBounds(157, 25, 992, 30);
-		frmMenu.getContentPane().add(txtInformazioni);
+		txtInfo = new JTextField();
+		txtInfo.setText("Benvenuti al ristorante da Ruiza");
+		txtInfo.setHorizontalAlignment(SwingConstants.CENTER);
+		txtInfo.setForeground(Color.BLACK);
+		txtInfo.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		txtInfo.setEditable(false);
+		txtInfo.setColumns(10);
+		txtInfo.setBackground(Color.WHITE);
+		txtInfo.setBounds(157, 25, 992, 30);
+		frmMenu.getContentPane().add(txtInfo);
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setIcon(new ImageIcon(Grafica.class.getResource("/Img/sfondo.jpg")));
@@ -542,4 +542,25 @@ public class Grafica_menu {
 	public void remove(int i) {
 		listMenu.remove(i);
 	}
+	
+	public void setLabel(String s) {
+		txtInfo.setText(s);
+	}
+	
+	public void setSpinner(int[] a) {
+		spinner0.setValue(a[0]);
+		spinner1.setValue(a[1]);
+		spinner2.setValue(a[2]);
+		spinner3.setValue(a[3]);
+		spinner4.setValue(a[4]);
+		spinner5.setValue(a[5]);
+		spinner6.setValue(a[6]);
+		spinner7.setValue(a[7]);
+		spinner8.setValue(a[8]);
+		spinner9.setValue(a[9]);
+		spinner10.setValue(a[10]);
+		spinner11.setValue(a[11]);
+		spinner12.setValue(a[12]);
+	}
+	
 }

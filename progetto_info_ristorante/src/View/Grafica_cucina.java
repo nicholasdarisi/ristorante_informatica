@@ -25,7 +25,7 @@ public class Grafica_cucina {
 	private JList<String> listCucina;
 	private JScrollPane scrollPaneCucina;
 	private JLabel lblSfondo;
-	private JTextField txtScegliUnPiatto;
+	private JTextField txtInfo;
 	private DefaultListModel<String> model;
 	
 	public Grafica_cucina() {
@@ -62,16 +62,16 @@ public class Grafica_cucina {
 		frmRistorante.getContentPane().add(scrollPaneCucina);
         scrollPaneCucina.getViewport().setOpaque(false);
 		
-		txtScegliUnPiatto = new JTextField();
-		txtScegliUnPiatto.setText("Scegli un piatto da cucinare");
-		txtScegliUnPiatto.setHorizontalAlignment(SwingConstants.CENTER);
-		txtScegliUnPiatto.setForeground(Color.BLACK);
-		txtScegliUnPiatto.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
-		txtScegliUnPiatto.setEditable(false);
-		txtScegliUnPiatto.setColumns(10);
-		txtScegliUnPiatto.setBackground(Color.WHITE);
-		txtScegliUnPiatto.setBounds(140, 26, 527, 30);
-		frmRistorante.getContentPane().add(txtScegliUnPiatto);
+		txtInfo = new JTextField();
+		txtInfo.setText("Scegli un piatto da cucinare");
+		txtInfo.setHorizontalAlignment(SwingConstants.CENTER);
+		txtInfo.setForeground(Color.BLACK);
+		txtInfo.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+		txtInfo.setEditable(false);
+		txtInfo.setColumns(10);
+		txtInfo.setBackground(Color.WHITE);
+		txtInfo.setBounds(140, 26, 527, 30);
+		frmRistorante.getContentPane().add(txtInfo);
 		
 		lblSfondo = new JLabel("");
 		lblSfondo.setBackground(Color.GREEN);
@@ -110,6 +110,10 @@ public class Grafica_cucina {
 	
 	public void remove(int i) {
 		listCucina.remove(i);
+	}
+	
+	public void setLabel(String s) {
+		txtInfo.setText(s);
 	}
 	
 }
