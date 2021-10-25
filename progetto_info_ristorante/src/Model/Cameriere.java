@@ -16,6 +16,9 @@ public class Cameriere {
         this.nome = nome;
     }
 
+    public void refreshOrder(){
+        this.ordini = Save.loadOrdine();
+    }
 
     public String receiveOrder(int ordinazione[]) {
         if(ordini.getOrdini().size() >= 10){
