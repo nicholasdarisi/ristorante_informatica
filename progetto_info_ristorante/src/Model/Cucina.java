@@ -19,6 +19,10 @@ public class Cucina {
         return " Ordine e stato ricevuto !!";
     }
 
+    public void refreshOrder(){
+        this.ordini = Save.loadOrdine();
+    }
+
     public String CookOrder(int tavolo){
         final String[] result = {nome + " : \n"};
         ordini.ordini.get(tavolo).forEach(
