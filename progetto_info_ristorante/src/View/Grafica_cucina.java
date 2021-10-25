@@ -90,7 +90,6 @@ public class Grafica_cucina {
 
 		startModel();
 
-
         listCucina = new JList<String>();
         listCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
         model = new DefaultListModel<>();
@@ -100,6 +99,7 @@ public class Grafica_cucina {
 		scrollPaneCucina = new JScrollPane(listCucina);
 		scrollPaneCucina.setBounds(12, 76, 217, 543);
 		frmCucina.getContentPane().add(scrollPaneCucina);
+		scrollPaneCucina.setViewportView(listCucina);
         scrollPaneCucina.getViewport().setOpaque(false);
 		
 		txtInfo = new JTextField();
@@ -511,11 +511,7 @@ public class Grafica_cucina {
 		textField11.setText(qty[11] + "");
 		textField12.setText(qty[12] + "");
 	}
-	
-	public void remove(int i) {
-		listCucina.remove(i);
-	}
-	
+
 	public void setLabel(String s) {
 		txtInfo.setText(s);
 	}

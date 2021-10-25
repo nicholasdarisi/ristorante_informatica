@@ -509,11 +509,7 @@ public class Grafica_tavoli {
 		textField11.setText(qty[11] + "");
 		textField12.setText(qty[12] + "");
 	}
-	
-	public void remove(int i) {
-		listTavoli.remove(i);
-	}
-	
+
 	public void setImporto(String i) {
 		txtInfo.setText("Importo da pagare: " + i + "$");
 	}

@@ -17,11 +17,13 @@ public class Controller_ValueChanged_Menu implements ListSelectionListener{
 		this.c = c;
 		this.o = o;
 		this.g = g;
+		g.registraValueChanged(this);
 	}
 
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub
+		System.out.println("haha");
 		c.refreshOrder();
 		g.setSpinner(o.getTavolo(g.getIndex()));
 	}

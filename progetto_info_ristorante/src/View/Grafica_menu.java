@@ -540,27 +540,6 @@ public class Grafica_menu {
 		return listMenu.getSelectedIndex();
 	}
 
-	public void setList(int qty[]) {
-		spinner0.setValue(qty[0] + "");
-		spinner1.setValue(qty[1] + "");
-		spinner2.setValue(qty[2] + "");
-		spinner3.setValue(qty[3] + "");
-		spinner4.setValue(qty[4] + "");
-		spinner5.setValue(qty[5] + "");
-		spinner6.setValue(qty[6] + "");
-		spinner7.setValue(qty[7] + "");
-		spinner8.setValue(qty[8] + "");
-		spinner9.setValue(qty[9] + "");
-		spinner10.setValue(qty[10] + "");
-		spinner11.setValue(qty[11] + "");
-		spinner12.setValue(qty[12] + "");
-
-	}
-	
-	public void remove(int i) {
-		listMenu.remove(i);
-	}
-	
 	public void setLabel(String s) {
 		txtInfo.setText(s);
 	}

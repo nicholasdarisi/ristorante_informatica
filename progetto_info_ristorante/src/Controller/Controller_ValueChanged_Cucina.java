@@ -17,6 +17,7 @@ public class Controller_ValueChanged_Cucina implements ListSelectionListener{
 		// TODO Auto-generated constructor stub
 		this.c = c;
 		this.g = g;
+		g.registraValueChanged(this);
 	}
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
