@@ -93,6 +93,7 @@ public class Grafica_cucina {
 
         listCucina = new JList<String>();
         listCucina.setFont(new Font("Kristen ITC", Font.PLAIN, 20));
+        model = new DefaultListModel<>();
         listCucina.setModel(model);
 		listCucina.setBounds(105, 640, 349, 113);
 		
