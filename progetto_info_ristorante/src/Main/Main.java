@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import Controller.*;
 import Model.*;
-import View.Grafica;
 import View.Grafica_cucina;
 import View.Grafica_menu;
 import View.Grafica_tavoli;
