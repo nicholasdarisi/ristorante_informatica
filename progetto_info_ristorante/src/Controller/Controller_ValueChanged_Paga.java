@@ -23,8 +23,6 @@ public class Controller_ValueChanged_Paga implements ListSelectionListener{
 		// TODO Auto-generated method stub
 		g.setList(c.getOrder().getTavolo(g.getIndex()));
 		g.setImporto(c.calcolaImporto(g.getIndex()));
-		//g.setNumeri(o.getTavolo(g.getIndex()));
-		
 	}
 	
 	

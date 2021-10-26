@@ -48,7 +48,8 @@ public class Cameriere {
         if (!ordini.isTavolo(tavolo)) return nome + ": Tavolo " + tavolo + " non aperto";
         int i = 0;
         for (Map.Entry<String, Integer> ordine : ordini.ordini.get(tavolo).entrySet()) {
-            ordine.setValue(ordinazioni[i++]);
+            if(ordinazioni[i] >= ordini.getQty()[tavolo][i])
+                ordine.setValue(ordinazioni[i++]);
         }
         Save.saveOrdine(ordini);
         return nome + " : tavolo " + tavolo + "" + " modificato con successo !!";

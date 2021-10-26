@@ -45,8 +45,11 @@ public class RefreshOrder implements Runnable {
             if (g_t.getIndex() != -1)
                 g_t.setList(cassa.getOrder().getTavolo(g_t.getIndex()));
             cucina.refreshOrder();
-            if (g_c.getIndex() != -1)
+            if (g_c.getIndex() != -1){
                 g_c.setList(cucina.getOrder().getTavolo(g_c.getIndex()));
+                g_c.setQty(cucina.getOrder().getQty()[g_c.getIndex()]);
+            }
+
 
         }
     }
