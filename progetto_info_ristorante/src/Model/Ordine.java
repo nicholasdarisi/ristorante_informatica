@@ -25,7 +25,6 @@ public class Ordine extends Menu implements Serializable {
 
 
     public int[] getTavolo(int tavolo) {
-        System.out.println(tavolo);
         int result[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         int i = 0;
         if(ordini.get(tavolo) != null)
